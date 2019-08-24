@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, Image, View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import { Icon } from "react-native-elements";
 
+import Base from '../components/Base'
+
 class MenuItem extends React.Component {
   render() {
     return (
@@ -40,12 +42,13 @@ class MenuItem extends React.Component {
 class Home extends React.Component {
   render() {
     return (
-      <ImageBackground
-        style={{width: '100%', height: '100%'}}
-        source={require("../assets/background.jpg")}
-      >
-        <View style={styles.Base}>
-          <Image style={styles.Logo} source={require("../assets/logo.png")} />
+    //   <ImageBackground
+    //     style={{width: '100%', height: '100%'}}
+    //     source={require("../assets/background.jpg")}
+    //   >
+    //     <View style={styles.Base}>
+    //       <Image style={styles.Logo} source={require("../assets/logo.png")} />
+    <Base>
           <View style={styles.Menu}>
             <MenuItem
               title="About Mindfulness"
@@ -73,8 +76,9 @@ class Home extends React.Component {
               path={() => this.props.navigation.navigate("Events")}
             />
           </View>
-        </View>
-      </ImageBackground>
+    </Base>
+    //     </View>
+    //   </ImageBackground>
     );
   }
 }
