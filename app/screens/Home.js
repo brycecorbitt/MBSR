@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, Image, View, Text, TouchableOpacity, ImageBackground } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
 
 import Base from '../components/Base'
+// import Button from '../components/Button'
 
 class MenuItem extends React.Component {
   render() {
@@ -75,6 +76,10 @@ class Home extends React.Component {
               icon="routes"
               path={() => this.props.navigation.navigate("Events")}
             />
+            {/* <Button title="Primary Button"></Button>
+            <Button title="Secondary Button" secondary={true}></Button>
+            <Button title="Primary Button With a left Icon" icon={{name: "rowing"}}></Button>
+            <Button title="Secondary Button With a right Icon" icon={{name: "rowing", end: true}} secondary={true}></Button> */}
           </View>
     </Base>
     //     </View>
