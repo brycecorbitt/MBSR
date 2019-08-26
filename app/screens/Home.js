@@ -43,12 +43,6 @@ class MenuItem extends React.Component {
 class Home extends React.Component {
   render() {
     return (
-    //   <ImageBackground
-    //     style={{width: '100%', height: '100%'}}
-    //     source={require("../assets/background.jpg")}
-    //   >
-    //     <View style={styles.Base}>
-    //       <Image style={styles.Logo} source={require("../assets/logo.png")} />
     <Base>
           <View style={styles.Menu}>
             <MenuItem
@@ -62,9 +56,14 @@ class Home extends React.Component {
               path={() => this.props.navigation.navigate("Exercises")}
             />
             <MenuItem
-              title="Calendar & Timer"
+              title="Schedule Reminder"
               icon="calendar"
               path={() => this.props.navigation.navigate("Calendar")}
+            />
+            <MenuItem
+              title="Practice Timer"
+              icon="timer-sand"
+              path={() => this.props.navigation.navigate("Timer")}
             />
             <MenuItem
               title="Inspirational Corner"
@@ -82,8 +81,6 @@ class Home extends React.Component {
             <Button title="Secondary Button With a right Icon" icon={{name: "rowing", end: true}} secondary={true}></Button> */}
           </View>
     </Base>
-    //     </View>
-    //   </ImageBackground>
     );
   }
 }
