@@ -1,0 +1,477 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+MERGED from [:react-native-reanimated] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-permissions] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.59.10] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/react-native-0.59.10.aar/2e75d8db31285557af71e6afbd950719/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88bb3975b086e4aa4ab3e9a525bb54ab/AndroidManifest.xml:17:1-22:12
+MERGED from [:unimodules-react-native-adapter] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-app-loader-provider] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-constants] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
+MERGED from [:expo-font] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-keep-awake] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-linear-gradient] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:expo-sqlite] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-web-browser] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-barcode-scanner-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-camera-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-constants-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-face-detector-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-file-system-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-font-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-permissions-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-task-manager-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-core] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-image-loader-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-sensors-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:transition:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/633f2cf9c1440aa6fcddbf2d44af4b14/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/b3919aec35502dbf674a512e944b01c6/AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/22e30d3f9c6afea3241e18755cc97aaa/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/16eb4d987985c65c8941efc74630c3bd/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/f78036359130e43b1c68e9d8ad30d09f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/fee64c940912f006f626ef432a0e9cc2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/7d2fe3366c446f3f0528a905d137020f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/e7f5b7b05978769440fcf903ef533ead/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/510a8f036bfa0df18e9151e5b65c4333/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/262c73619bddb907f9ff79b6553af5c5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/e3c7668154ef324c7800d871add4bf46/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/d035e3765b23de0e53b3233d78d2a4c2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/669c27805f38cfc7c0a610ea14bdd5bb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a0ebb96590e065730ebae203a7ebd3e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/17888aaf8940d97ce38e3b2719cb5904/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f6bdc7e858d930c66d1a8d7dc63325e7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/10a70e4140e868ce940053bead04726c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/adccae806abb05dd3eeac45dbb327a1c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/8d433cfc9c9399f00c32a0c5d7126344/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/a6baf589c32ebb10de519d78ce380a37/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/fa7a454d43e2e846b41dd36203cc3333/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c4b98a33e9f2a08bfa72be088681504c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c80e1512df43b7553112ebbde678b32c/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/3f7495e0da638841093cb1ef1d014297/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/672bb1bb2aedd4cb2f01237b8085b7c7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/d191a8946c90e1c3e959115d27d6c168/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/504a6c1d1b861115ca71ac13672dce3d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/fc7eeea196c4f6db81b2bbff5563263c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/86ef61111a34632d730416c373f9c32b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/77c699795098e4dcf036d4a18eb6e0a8/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/643b9588dc27f47c799ee58a7a36a9b1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/7f3b9d426deb94e1e859c111e695bb50/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/1ab6dfe742182c55544685697be2be51/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/06c0cf4e7f498506f0bc96762ffb585c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/01bfeb60a7da771d4e5bd66f94d939c1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/7be5f58a6e3d930af528d56486c3314d/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/47747eeb98ec4ffc7b5de5a96ee8c7f4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/a25aa1f353891060f6778c10a4b11b0a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/6ac0ab6392862cdf2c249d55936e0779/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/82c096edc9ac053381831252eaf114d2/AndroidManifest.xml:2:1-13:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/12785cb0274b48dd1edf16a8f7ab4df5/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+	package
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:2:5-33
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:1-48:12
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:8:5-75
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:8:22-72
+uses-permission#android.permission.READ_INTERNAL_STORAGE
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:10:22-72
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:11:5-74
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:11:22-71
+uses-permission#android.permission.VIBRATE
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:12:22-63
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:13:22-77
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:16:5-81
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:16:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:17:5-79
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:18:5-65
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:18:22-62
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:19:5-72
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:19:22-69
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:20:5-72
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:20:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:21:5-73
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:21:22-70
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:22:5-80
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:22:22-77
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:23:5-71
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:23:22-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:24:5-81
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:24:22-78
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:25:5-73
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:25:22-70
+application
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:28:5-46:19
+MERGED from [com.facebook.react:react-native:0.59.10] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/react-native-0.59.10.aar/2e75d8db31285557af71e6afbd950719/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.59.10] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/react-native-0.59.10.aar/2e75d8db31285557af71e6afbd950719/AndroidManifest.xml:11:5-20
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/b3919aec35502dbf674a512e944b01c6/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/b3919aec35502dbf674a512e944b01c6/AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/22e30d3f9c6afea3241e18755cc97aaa/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/22e30d3f9c6afea3241e18755cc97aaa/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/16eb4d987985c65c8941efc74630c3bd/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/16eb4d987985c65c8941efc74630c3bd/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/f78036359130e43b1c68e9d8ad30d09f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/f78036359130e43b1c68e9d8ad30d09f/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c4b98a33e9f2a08bfa72be088681504c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c4b98a33e9f2a08bfa72be088681504c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c80e1512df43b7553112ebbde678b32c/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c80e1512df43b7553112ebbde678b32c/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/77c699795098e4dcf036d4a18eb6e0a8/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/77c699795098e4dcf036d4a18eb6e0a8/AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/82c096edc9ac053381831252eaf114d2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/82c096edc9ac053381831252eaf114d2/AndroidManifest.xml:11:5-20
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:18:5-28:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c4b98a33e9f2a08bfa72be088681504c/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:30:7-39
+	android:roundIcon
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:32:7-52
+	android:icon
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:31:7-41
+	android:allowBackup
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:33:7-34
+	android:theme
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:34:7-38
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:29:7-38
+activity#com.do_you_mindful.MainActivity
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:35:7-44:18
+	android:label
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:37:9-41
+	android:windowSoftInputMode
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:39:9-51
+	android:configChanges
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:38:9-79
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:36:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:40:9-43:25
+action#android.intent.action.MAIN
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:41:13-65
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:41:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:42:13-73
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:42:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:45:7-84
+	android:name
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml:45:17-81
+uses-sdk
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-reanimated] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.59.10] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/react-native-0.59.10.aar/2e75d8db31285557af71e6afbd950719/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.59.10] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/react-native-0.59.10.aar/2e75d8db31285557af71e6afbd950719/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88bb3975b086e4aa4ab3e9a525bb54ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88bb3975b086e4aa4ab3e9a525bb54ab/AndroidManifest.xml:20:5-44
+MERGED from [:unimodules-react-native-adapter] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-react-native-adapter] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-loader-provider] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-loader-provider] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-font] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-font] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:transition:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/633f2cf9c1440aa6fcddbf2d44af4b14/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/633f2cf9c1440aa6fcddbf2d44af4b14/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/b3919aec35502dbf674a512e944b01c6/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/glide-4.9.0.aar/b3919aec35502dbf674a512e944b01c6/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/22e30d3f9c6afea3241e18755cc97aaa/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-location-16.0.0.aar/22e30d3f9c6afea3241e18755cc97aaa/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/16eb4d987985c65c8941efc74630c3bd/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/16eb4d987985c65c8941efc74630c3bd/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/f78036359130e43b1c68e9d8ad30d09f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/f78036359130e43b1c68e9d8ad30d09f/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/fee64c940912f006f626ef432a0e9cc2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/fee64c940912f006f626ef432a0e9cc2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/7d2fe3366c446f3f0528a905d137020f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/7d2fe3366c446f3f0528a905d137020f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/e7f5b7b05978769440fcf903ef533ead/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/e7f5b7b05978769440fcf903ef533ead/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/510a8f036bfa0df18e9151e5b65c4333/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/customtabs-28.0.0.aar/510a8f036bfa0df18e9151e5b65c4333/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/262c73619bddb907f9ff79b6553af5c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/262c73619bddb907f9ff79b6553af5c5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/e3c7668154ef324c7800d871add4bf46/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/e3c7668154ef324c7800d871add4bf46/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/d035e3765b23de0e53b3233d78d2a4c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/d035e3765b23de0e53b3233d78d2a4c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/669c27805f38cfc7c0a610ea14bdd5bb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/669c27805f38cfc7c0a610ea14bdd5bb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a0ebb96590e065730ebae203a7ebd3e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/0a0ebb96590e065730ebae203a7ebd3e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/17888aaf8940d97ce38e3b2719cb5904/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/17888aaf8940d97ce38e3b2719cb5904/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f6bdc7e858d930c66d1a8d7dc63325e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/f6bdc7e858d930c66d1a8d7dc63325e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/10a70e4140e868ce940053bead04726c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/10a70e4140e868ce940053bead04726c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/adccae806abb05dd3eeac45dbb327a1c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/adccae806abb05dd3eeac45dbb327a1c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/8d433cfc9c9399f00c32a0c5d7126344/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/8d433cfc9c9399f00c32a0c5d7126344/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/a6baf589c32ebb10de519d78ce380a37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/a6baf589c32ebb10de519d78ce380a37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/fa7a454d43e2e846b41dd36203cc3333/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/fa7a454d43e2e846b41dd36203cc3333/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c4b98a33e9f2a08bfa72be088681504c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/c4b98a33e9f2a08bfa72be088681504c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c80e1512df43b7553112ebbde678b32c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/c80e1512df43b7553112ebbde678b32c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/3f7495e0da638841093cb1ef1d014297/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/3f7495e0da638841093cb1ef1d014297/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/672bb1bb2aedd4cb2f01237b8085b7c7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/672bb1bb2aedd4cb2f01237b8085b7c7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/d191a8946c90e1c3e959115d27d6c168/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/d191a8946c90e1c3e959115d27d6c168/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/504a6c1d1b861115ca71ac13672dce3d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/504a6c1d1b861115ca71ac13672dce3d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/fc7eeea196c4f6db81b2bbff5563263c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/fc7eeea196c4f6db81b2bbff5563263c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/86ef61111a34632d730416c373f9c32b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/86ef61111a34632d730416c373f9c32b/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/77c699795098e4dcf036d4a18eb6e0a8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.9.0.aar/77c699795098e4dcf036d4a18eb6e0a8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:interpolator:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/643b9588dc27f47c799ee58a7a36a9b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/643b9588dc27f47c799ee58a7a36a9b1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/7f3b9d426deb94e1e859c111e695bb50/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/7f3b9d426deb94e1e859c111e695bb50/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/1ab6dfe742182c55544685697be2be51/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/1ab6dfe742182c55544685697be2be51/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/06c0cf4e7f498506f0bc96762ffb585c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/06c0cf4e7f498506f0bc96762ffb585c/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/01bfeb60a7da771d4e5bd66f94d939c1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/01bfeb60a7da771d4e5bd66f94d939c1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/7be5f58a6e3d930af528d56486c3314d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/7be5f58a6e3d930af528d56486c3314d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/47747eeb98ec4ffc7b5de5a96ee8c7f4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/47747eeb98ec4ffc7b5de5a96ee8c7f4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/a25aa1f353891060f6778c10a4b11b0a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/a25aa1f353891060f6778c10a4b11b0a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/6ac0ab6392862cdf2c249d55936e0779/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/6ac0ab6392862cdf2c249d55936e0779/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/82c096edc9ac053381831252eaf114d2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/82c096edc9ac053381831252eaf114d2/AndroidManifest.xml:7:5-9:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/12785cb0274b48dd1edf16a8f7ab4df5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/12785cb0274b48dd1edf16a8f7ab4df5/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/brycetherower/Documents/MBSR/app_migrated/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.STORAGE
+ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
+	android:name
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
+	android:authorities
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
+	android:exported
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
+	tools:replace
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-48
+	android:name
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:70
+	android:resource
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-67
+	android:name
+		ADDED from [:expo-file-system] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+service#expo.modules.location.services.LocationTaskService
+ADDED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:expo-location] /home/brycetherower/Documents/MBSR/app_migrated/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ac80ee2d980134c762e708f126330038/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c41a663166d1b509592c6a69e2ebc0c1/AndroidManifest.xml:24:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:13:22-76
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/brycetherower/.gradle/caches/transforms-1/files-1.1/library-3.2.11.aar/fc8a9ba9970a19c494e6516f0304dc0a/AndroidManifest.xml:26:13-120
