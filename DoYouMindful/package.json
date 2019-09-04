@@ -10,6 +10,7 @@
     "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons"
   },
   "dependencies": {
+    "moment": "^2.24.0",
     "react": "16.8.6",
     "react-native": "^0.60.5",
     "react-native-countdown-component": "^2.5.2",

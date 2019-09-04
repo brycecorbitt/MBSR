@@ -42,7 +42,7 @@ class Timer extends React.Component {
   render() {
     let toggleText = ['Start Timer', 'Stop Timer'];
     return (
-      <Base>
+      <Base logo>
         <View
           style={{
             flex: 1,

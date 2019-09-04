@@ -44,7 +44,7 @@ class MenuItem extends React.Component {
 class Home extends React.Component {
   render() {
     return (
-    <Base>
+    <Base logo>
           <View style={styles.Menu}>
             <MenuItem
               title="About Mindfulness"

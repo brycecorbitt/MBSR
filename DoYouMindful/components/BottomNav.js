@@ -6,8 +6,8 @@ import Button from "./Button"
 class BottomNav extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: "row", marginVertical: "5%" }}>
-        <View style={{ flex: 1, marginLeft: "5%", marginRight: "10%" }}>
+      <View style={{ flex: 1, flexDirection: "row", marginVertical: 10 }}>
+        <View style={{ flex: 1, marginLeft: "5%", marginRight: "10%", height: 60 }}>
           <Button
             title="Back"
             icon={{ name: "chevron-left" }}
@@ -15,7 +15,7 @@ class BottomNav extends React.Component {
             onPress={this.props.onBack}
           />
         </View>
-        <View style={{ flex: 1, marginRight: "5%", marginLeft: "10%" }}>
+        <View style={{ flex: 1, marginRight: "5%", marginLeft: "10%", height: 60}}>
           <Button
             title="Home"
             icon={{ name: "home", end: true }}
