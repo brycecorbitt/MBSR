@@ -43,6 +43,7 @@ services:
       - CMS_USERNAME=${CMS_ADMIN_USERNAME}
       - CMS_PASSWORD=${CMS_ADMIN_PASSWORD}
       - CMS_PORT=1337
+    restart: on-failure
     depends_on:
       - db
       - strapi
