@@ -1,0 +1,20 @@
+{
+  "name": "mbsr-server",
+  "version": "1.0.0",
+  "description": "The main server of the MBSR platform to bridge content with the client app.",
+  "main": "app.js",
+  "author": "Bryce Corbitt",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.13",
+    "shortid": "^2.2.15",
+    "strapi-sdk-javascript": "^0.3.1",
+    "validator": "^11.1.0"
+  }
+}

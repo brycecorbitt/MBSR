@@ -102,11 +102,3 @@ node_modules
 
 testApp
 coverage
-
-############################
-# Strapi
-############################
-
-exports
-.cache
-build

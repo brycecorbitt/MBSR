@@ -1,0 +1,50 @@
+version: "3.3"
+
+services:
+  db:
+    image: mongo
+    network_mode: "host"
+    environment:
+      - MONGO_INITDB_DATABASE=admin
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+
+  strapi:
+    image: strapi/strapi
+    network_mode: "host"
+    environment:
+      - APP_NAME=cms
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=${DB_HOST}
+      - DATABASE_NAME=${CMS_DB_NAME}
+      - DATABASE_PORT=27017
+      - DATABASE_SSL=false
+      - HOST=localhost
+      - ADMIN_USERNAME=${CMS_ADMIN_USERNAME}
+      - ADMIN_EMAIL=${CMS_ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${CMS_ADMIN_PASSWORD}
+    ports:
+      - 1337:1337
+    volumes:
+      - type: bind
+        source: ./cms
+        target: /usr/src/api/cms
+    depends_on:
+      - db
+
+  server:
+    build: ./server
+    network_mode: "host"
+    environment:
+      - SERVER_PORT=34543
+      - CMS_HOST=${CMS_HOST}
+      - CMS_USERNAME=${CMS_ADMIN_USERNAME}
+      - CMS_PASSWORD=${CMS_ADMIN_PASSWORD}
+      - CMS_PORT=1337
+    depends_on:
+      - db
+      - strapi
+    ports:
+      - 34543:34543
