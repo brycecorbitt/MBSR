@@ -10,7 +10,8 @@ const server = `${host}:${port}`;
 const database = process.env.DB_INITDB || 'admin';
 
   module.exports = function init_connection(callback) {
-    mongoose.connect(`mongodb://${server}/${database}`, { useNewUrlParser: true});
+    mongoose.set('useCreateIndex', true)
+    mongoose.connect(`mongodb://${server}/${database}`, { useNewUrlParser: true, dbName: "mbsr"});
     var db = mongoose.connection;
     db.on('error', function (err) {
       console.error('MongoDB connection failed.');
