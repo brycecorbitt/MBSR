@@ -1,15 +1,10 @@
 let mongoose = require('mongoose');
 let validator = require('validator');
-let shortid = require('shortid')
-let bcrypt = require(bcrypt),
+let bcrypt = require('bcrypt');
 
 const SALT_WORK_FACTOR = 10;
 
 let userSchema = mongoose.Schema({
-  _id: {
-    type: String,
-    default: shortid.generate
-  },
 	first_name: {
 		type: String,
 		required: true
@@ -17,7 +12,12 @@ let userSchema = mongoose.Schema({
 	last_name: {
 		type: String,
 		required: true
-	},
+  },
+  username: {
+    type: String,
+    required: true,
+    unique: true
+  },
 	email: {
 		type: String,
 		required: true,
@@ -36,7 +36,7 @@ let userSchema = mongoose.Schema({
   timestamps: true
 });
 
-userSchema.pre(save, function(next) {
+userSchema.pre('save', function(next) {
     var user = this;
 
   // only hash the password if it has been modified (or is new)
@@ -64,4 +64,4 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
   });
 };
 
-module.exports = mongoose.model('Email', emailSchema);
+module.exports = mongoose.model('User', userSchema);
