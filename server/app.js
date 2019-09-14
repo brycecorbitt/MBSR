@@ -15,26 +15,31 @@ const launch_server = function() {
 	const port = process.env.SERVER_PORT || 34543;
 
 	app.use(bodyParser.json());
-	app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(bodyParser.urlencoded({ extended: true }));
+    
+    //configure pug as view engine for html pages
+    app.set('view engine', 'pug');
+    app.set('views', './views');
 
-	app.get("/", (req, res) => res.send("Successfully reached MBSR server!"));
+    //map html routes
+    var register_form = require('./routes/html/register_form');
+    app.use('/', register_form);
 
-	const server = app.listen(port, () => console.log(`MBSR server listening on port ${port}!`));
+    app.get('/', (req, res) => res.render('home'));
+
+    const server = app.listen(port, () => console.log(`MBSR server listening on port ${port}!`));
+    
+    process.on('SIGINT', shutdown);
+    function shutdown() {
+        server.close(() => {
+            process.exit(0);
+        });
+
+        setTimeout(() => {
+            console.error('Could not close MBSR server connections in time, forcefully shutting down');
+            process.exit(3);
+        }, 10000);
+    }
 };
 
-process.on('SIGINT', shutdown);
 
-
-function shutdown() {
-    server.close(() => {
-        process.exit(0);
-    });
-
-    setTimeout(() => {
-        console.error('Could not close MBSR server connections in time, forcefully shutting down');
-        process.exit(3);
-    }, 10000);
-
-    connections.forEach(curr => curr.end());
-    setTimeout(() => connections.forEach(curr => curr.destroy()), 5000);
-}
