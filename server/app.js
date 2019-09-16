@@ -28,6 +28,10 @@ const launch_server = async function() {
 	app.set("view engine", "pug");
 	app.set("views", "./views");
 
+	//map api routes
+	var login_route = require("./routes/api/user/login");
+	app.use("/api/", login_route);
+
 	//map html routes
 	var register_form = require("./routes/html/register_form");
 	app.use("/", register_form);
