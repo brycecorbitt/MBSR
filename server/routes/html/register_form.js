@@ -3,7 +3,6 @@ const express = require("express");
 const shortHash = require("shorthash");
 const User = require("../../db/models/user");
 
-var mongoose = require("mongoose");
 var router = express.Router();
 
 // The users to be registered should ideally be retrieved in a less hard-coded way, but
