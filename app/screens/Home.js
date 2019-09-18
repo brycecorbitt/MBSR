@@ -1,9 +1,9 @@
-import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import React from 'react';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
-import { Icon } from "react-native-elements";
-
-import Base from '../components/Base'
+import {Icon} from 'react-native-elements';
+import API from '../API';
+import Base from '../components/Base';
 // import Button from '../components/Button'
 
 class MenuItem extends React.Component {
@@ -11,13 +11,12 @@ class MenuItem extends React.Component {
     return (
       <View
         style={{
-          flexDirection: "row",
-          alignItems: "center",
+          flexDirection: 'row',
+          alignItems: 'center',
           marginVertical: 15,
-          marginHorizontal: 20
-        }}
-      >
-        <View style={{ flex: 1, marginRight: 10 }}>
+          marginHorizontal: 20,
+        }}>
+        <View style={{flex: 1, marginRight: 10}}>
           <Icon
             type="material-community"
             name={this.props.icon}
@@ -25,12 +24,11 @@ class MenuItem extends React.Component {
             color="#2e466c"
           />
         </View>
-        <View style={{ flex: 6, height: 40 }}>
+        <View style={{flex: 6, height: 40}}>
           <TouchableOpacity
             color="#2e466c"
             title={this.props.title}
-            onPress={this.props.path}
-          >
+            onPress={this.props.path}>
             <Text style={styles.MenuButton} size={48}>
               {this.props.title}
             </Text>
@@ -42,46 +40,101 @@ class MenuItem extends React.Component {
 }
 
 class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      user: API.get_user()
+    };
+  }
+
+  async componentDidMount() {
+    user_call = await API.check_session();
+    if(user_call.data)
+      this.setState({user: user_call.data});
+    const { navigation } = this.props;
+    this.focusListener = navigation.addListener('didFocus', () => {
+      this.setState({user: API.get_user()});
+    });
+  }
+
+  componentWillUnmount() {
+    // Remove the event listener
+    this.focusListener.remove();
+  }
+
+
+  render_user(){
+    let {user} = this.state;
+    if(user){
+      return (
+      <View style={{position:'absolute',top:0, zIndex: 2, alignContent: 'flex-start'}}>
+        <TouchableOpacity
+          style={{flexDirection: 'row'}}
+          onPress={() => {
+            this.props.navigation.navigate('Account');
+          }}>
+            <Icon
+              type="material-community"
+              name="account"
+              size={28}
+              color="#2e466c"
+            />
+            <Text style={{color: "#2e466c", textAlignVertical: "center"}}>{user.username}</Text>
+        </TouchableOpacity>
+      </View>);
+    }
+    return null;
+  }
   render() {
     return (
-    <Base logo>
-          <View style={styles.Menu}>
-            <MenuItem
-              title="About Mindfulness"
-              icon="lightbulb-outline"
-              path={() => this.props.navigation.navigate("About")}
+      <Base logo>
+        {this.render_user()}
+        <View style={{position:'absolute',top:0, zIndex: 2, alignSelf: 'flex-end'}}>
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.navigate('Settings');
+            }}>
+            <Icon
+              type="material-community"
+              name="settings"
+              size={28}
+              color="#2e466c"
             />
-            <MenuItem
-              title="Mindfulness Exercises"
-              icon="human-handsup"
-              path={() => this.props.navigation.navigate("Exercises")}
-            />
-            <MenuItem
-              title="Schedule Reminder"
-              icon="calendar"
-              path={() => this.props.navigation.navigate("Calendar")}
-            />
-            <MenuItem
-              title="Practice Timer"
-              icon="timer-sand"
-              path={() => this.props.navigation.navigate("Timer")}
-            />
-            <MenuItem
-              title="Inspirational Corner"
-              icon="format-quote-close"
-              path={() => this.props.navigation.navigate("Inspiration")}
-            />
-            <MenuItem
-              title="Local Events"
-              icon="routes"
-              path={() => this.props.navigation.navigate("Events")}
-            />
-            {/* <Button title="Primary Button"></Button>
-            <Button title="Secondary Button" secondary={true}></Button>
-            <Button title="Primary Button With a left Icon" icon={{name: "rowing"}}></Button>
-            <Button title="Secondary Button With a right Icon" icon={{name: "rowing", end: true}} secondary={true}></Button> */}
-          </View>
-    </Base>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.Menu}>
+          <MenuItem
+            title="About Mindfulness"
+            icon="lightbulb-outline"
+            path={() => this.props.navigation.navigate('About')}
+          />
+          <MenuItem
+            title="Mindfulness Exercises"
+            icon="human-handsup"
+            path={() => this.props.navigation.navigate('Exercises')}
+          />
+          <MenuItem
+            title="Schedule Reminder"
+            icon="calendar"
+            path={() => this.props.navigation.navigate('Calendar')}
+          />
+          <MenuItem
+            title="Practice Timer"
+            icon="timer-sand"
+            path={() => this.props.navigation.navigate('Timer')}
+          />
+          <MenuItem
+            title="Inspirational Corner"
+            icon="format-quote-close"
+            path={() => this.props.navigation.navigate('Inspiration')}
+          />
+          <MenuItem
+            title="Local Events"
+            icon="routes"
+            path={() => this.props.navigation.navigate('Events')}
+          />
+        </View>
+      </Base>
     );
   }
 }
@@ -89,37 +142,37 @@ class Home extends React.Component {
 const styles = StyleSheet.create({
   Base: {
     flex: 1,
-    marginTop: 24
+    marginTop: 24,
   },
   Logo: {
     flex: 1,
     marginVertical: 20,
-    resizeMode: "contain"
+    resizeMode: 'contain',
   },
   Menu: {
     flex: 6,
-    flexDirection: "column"
+    flexDirection: 'column',
   },
   MenuItem: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: 'row',
     // justifyContent: "space-around",
-    alignItems: "stretch"
+    alignItems: 'stretch',
   },
   MenuButton: {
-    color: "white",
-    backgroundColor: "rgba(46,70,108,1)",
-    textAlign: "center",
-    textAlignVertical: "center",
+    color: 'white',
+    backgroundColor: 'rgba(46,70,108,1)',
+    textAlign: 'center',
+    textAlignVertical: 'center',
     paddingVertical: 10,
     fontSize: 18,
     borderRadius: 2,
-    borderWidth: 1
+    borderWidth: 1,
   },
   MenuIcon: {
     flex: 1,
-    marginRight: 20
-  }
+    marginRight: 20,
+  },
 });
 
 export default Home;

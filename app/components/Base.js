@@ -12,7 +12,7 @@ class Base extends React.Component {
     if(this.props.logo) {
       var logo = (
       <Image
-        style={{ flex: 1, marginVertical: 20, resizeMode: "contain" }}
+        style={{ flex: 1, marginTop: 30, marginBottom: 10, resizeMode: "contain" }}
         source={require("../assets/logo.png")}
       />)
       }
@@ -23,9 +23,9 @@ class Base extends React.Component {
         style={{ width: "100%", height: "100%" }}
         source={require("../assets/background.jpg")}
       >
-        <View style={{ flex: 1, marginTop: 24 }}>
-          {logo}
-          <View style={{ flex: 6 }}>{this.props.children}</View>
+        <View style={{ flex: 1, marginTop: 0, zIndex: 1}}>
+          
+          <View style={{ flex: 1 }}>{logo}{this.props.children}</View>
         </View>
       </ImageBackground>
     );
