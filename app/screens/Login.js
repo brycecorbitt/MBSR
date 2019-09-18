@@ -78,6 +78,7 @@ class Login extends React.Component {
           <TextInput
             style={styles.TextInput}
             value={this.state.username}
+            autoCapitalize="none"
             onChangeText={(text) => this.setState({username: text})}
           />
           <Text style={styles.textInputHeader}>Password</Text>
