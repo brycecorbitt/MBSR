@@ -14,6 +14,7 @@ const users = (path => {
 	let result = {};
 	//generate a unique hash based off the email to be used in the url.
 	entries.forEach(entry => {
+		entry.email = entry.email.toLowerCase();
 		result[shortHash.unique(entry.email)] = entry;
 	});
 	return result;
@@ -39,6 +40,16 @@ router
 
 		// get fields from body
 		let params = req.body;
+		if(!(params.username && params.password && params.password_confirm)) {
+			res.render("register_form", {
+				user: users[id],
+				error: "Missing Required Fields"
+			});
+			return;
+		}
+
+		//all usernames will be stored in lowercase
+		params.username = params.username.toLowerCase();
 
 		//check if passwords match
 		if (params.password !== params.password_confirm) {

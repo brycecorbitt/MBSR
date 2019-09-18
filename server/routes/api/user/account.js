@@ -10,6 +10,7 @@ router.post("/login", async function(req, res) {
 		res.status(400).json({ data: {}, error: "Missing Required Fields." });
 		return;
 	}
+	username = username.toLowerCase();
 
 	// search for user with matching email/username
 	let email_match = await User.findOne({ email: username });
