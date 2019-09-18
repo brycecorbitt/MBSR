@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
+const morgan = require("morgan");
 const MongoStore = require("connect-mongo")(session);
 const mongoose_connection = require("./db/database");
 const cms = require("./strapi_init");
@@ -18,10 +19,13 @@ const launch_server = async function() {
 	const port = process.env.SERVER_PORT || 34543;
 
 	app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }));
+		app.use(bodyParser.urlencoded({ extended: true }));
+		app.use(morgan('tiny'));
     app.use(session({
         store: new MongoStore({ mongooseConnection: mongoose.connection }),
-        secret: "MY TEST SECRET"
+				secret: "MY TEST SECRET", // Should be loaded from somehwere secure in production
+				saveUninitialized: false,
+				resave: false
     }));
 
 	//configure pug as view engine for html pages
@@ -29,8 +33,8 @@ const launch_server = async function() {
 	app.set("views", "./views");
 
 	//map api routes
-	var login_route = require("./routes/api/user/login");
-	app.use("/api/", login_route);
+	var account_route = require("./routes/api/user/account");
+	app.use("/api/", account_route);
 
 	//map html routes
 	var register_form = require("./routes/html/register_form");

@@ -39,4 +39,23 @@ router.post("/login", async function(req, res) {
 	}
 });
 
+router.get('/account', function(req,res) {
+	if(!req.session.user){
+		res.json({data: null});
+		return;
+	}
+	
+	let data = {};
+	Object.assign(data, req.session.user);
+	delete data.password;
+	delete data.__v;
+	delete data._id;
+	res.json({ data: data });
+})
+
+router.get('/logout', function(req,res) {
+	req.session.destroy();
+	res.status(200).json({});
+})
+
 module.exports = router;
