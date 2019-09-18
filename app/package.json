@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
+    "android": "react-native run-android",
     "test": "jest",
     "lint": "eslint .",
     "postinstall": "npx jetify",
@@ -14,6 +15,7 @@
     "react": "16.8.6",
     "react-native": "^0.60.5",
     "react-native-countdown-component": "^2.5.2",
+    "react-native-dropdownalert": "^4.2.0",
     "react-native-elements": "^1.1.0",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-sound": "^0.11.0",
