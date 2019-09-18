@@ -1,0 +1,8 @@
+{
+  "api_config": {
+    "protocol": "http",
+    "host": "[YOUR_MBSR_IP_OR_DOMAIN]",
+    "port": 34543
+  }
+  
+}
