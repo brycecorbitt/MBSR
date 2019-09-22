@@ -1,1 +1,5 @@
-{}
+{
+  "root_files": ["../config.json","./*"],
+  "ignore_dirs": ["../cms", "../db", "../server"]
+
+}

@@ -1,4 +1,5 @@
-const config = require('./config.json').api_config;
+const config = require('../config.json').mbsr_connection;
+//NOTE: Make sure the settings in config.json match the configuration needed to connect to your deployed MBSR server.
 
 class API {
   constructor() {

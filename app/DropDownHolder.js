@@ -10,6 +10,10 @@ class DropDownHolder {
   static throwError(msg) {
     this.dropDown.alertWithType('error', 'Error', msg);
   }
+
+  static throwSuccess(msg) {
+    this.dropDown.alertWithType('success', 'Success', msg);
+  }
 }
 
 export default DropDownHolder;

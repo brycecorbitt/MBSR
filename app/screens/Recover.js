@@ -5,7 +5,6 @@ import {
   TextInput,
   StyleSheet,
   ActivityIndicator,
-  TouchableOpacity
 } from 'react-native';
 import {Icon} from 'react-native-elements';
 
@@ -15,13 +14,12 @@ import BottomNav from '../components/BottomNav';
 import DropDownHolder from '../DropDownHolder';
 import API from '../API';
 
-class Login extends React.Component {
+class Recover extends React.Component {
   constructor(props) {
     super(props);
     this.state={
       loading: false,
-      username: '',
-      password: '',
+      email: '',
     };
   }
 
@@ -31,15 +29,17 @@ class Login extends React.Component {
     return null;
   }
 
-  _submit_login() {
-    let {username, password} = this.state;
+  _submit_email() {
+    let {email} = this.state;
     this.setState({loading: true});
-    API.login(username, password).then(res => {
+    API.post("/recover", {email: email}).then(res => {
       this.setState({loading: false});
       if(res.error)
         DropDownHolder.throwError(res.error);
-      else
-        this.props.navigation.navigate('Account');
+      else {
+        DropDownHolder.throwSuccess("You will receive an email shortly to reset your password.");
+        this.props.navigation.navigate("Login");
+      }
     });
 
   }
@@ -65,7 +65,7 @@ class Login extends React.Component {
               textAlign: 'center',
               flex: 1,
             }}>
-            Login
+            Account Recovery
           </Text>
         </View>
         <View
@@ -75,27 +75,16 @@ class Login extends React.Component {
             marginVertical: 20,
             justifyContent: 'flex-start',
           }}>
-          <Text style={styles.textInputHeader}>Email or Username</Text>
+          <Text style={styles.textInputHeader}>Email Address of Account</Text>
           <TextInput
             style={styles.TextInput}
-            value={this.state.username}
+            value={this.state.email}
             autoCapitalize="none"
-            onChangeText={(text) => this.setState({username: text})}
+            onChangeText={(text) => this.setState({email: text})}
           />
-          <Text style={styles.textInputHeader}>Password</Text>
-          <TextInput
-            style={styles.TextInput}result
-            value={this.state.password}
-            textContentType="password"
-            secureTextEntry
-            onChangeText={(text) => this.setState({password: text})}
-          />
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Recover')}>
-            <Text style={{color: "rgba(46,70,108,1)"}}>Forgot Password?</Text>
-          </TouchableOpacity>
           <View style={{flexDirection: 'row', marginVertical: 20}}>
             <View style={{alignContent: 'stretch', flex: 1}}>
-              <Button secondary title="Submit" onPress={() => this._submit_login()} />
+              <Button secondary title="Submit" onPress={() => this._submit_email()} />
             </View>
             <View style={{flex: 1}}>
               {this.loadingRender()}
@@ -104,7 +93,7 @@ class Login extends React.Component {
         </View>
 
         <BottomNav
-          onBack={() => this.props.navigation.navigate('Settings')}
+          onBack={() => this.props.navigation.navigate('Login')}
           onHome={() => this.props.navigation.navigate('Home')}
         />
       </Base>
@@ -122,4 +111,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-export default Login;
+export default Recover;

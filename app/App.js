@@ -20,6 +20,7 @@ import Events from './screens/Events';
 import Settings from './screens/Settings';
 import Login from './screens/Login';
 import Account from './screens/Account';
+import Recover from './screens/Recover';
 
 const AppNavigator = createStackNavigator(
   {
@@ -52,6 +53,9 @@ const AppNavigator = createStackNavigator(
     },
     Account: {
       screen: Account,
+    },
+    Recover: {
+      screen: Recover
     }
   },
   {
