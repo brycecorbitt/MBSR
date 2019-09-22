@@ -38,7 +38,9 @@ const launch_server = async function() {
 
 	//map html routes
 	var register_form = require("./routes/html/register_form");
+	var recovery_form = require("./routes/html/recovery_form");
 	app.use("/", register_form);
+	app.use("/", recovery_form);
 
 	app.get("/", (req, res) => res.render("home"));
 

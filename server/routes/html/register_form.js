@@ -2,6 +2,7 @@ const csvLoader = require("csv-load-sync");
 const express = require("express");
 const shortHash = require("shorthash");
 const User = require("../../db/models/user");
+const AccountRequest = require("../../db/models/account_request");
 
 var router = express.Router();
 
@@ -21,7 +22,70 @@ const users = (path => {
 })(users_file);
 
 router.get("/register/success", function(req, res) {
-	res.render("register_success");
+	res.render("success", {
+		title: "You're all set!",
+		message:
+			"You've successfully registered your account. Are now able to log into the DoYouMindful App with the credentials you've entered."
+	});
+});
+
+// Form to anonymously request account creation.
+router
+	.route("/register/request")
+	.get(function(req, res) {
+		res.render("account_request_form");
+	})
+	.post(async function(req, res) {
+		let { first_name, last_name, email } = req.body;
+		if (!email) {
+			res.render("account_request_form", { error: "Email is required." });
+			return;
+		}
+
+		// check if user with email already exists
+		let match = await User.findOne({ email: email });
+		if (match) {
+			res.render("account_request_form", {
+				error: "An account with the requested email already exists."
+			});
+			return;
+		}
+
+		// check if a request under requested email already exists
+		match = await AccountRequest.findOne({ email: email });
+		if (match) {
+			res.render("account_request_form", {
+				error:
+					"A request for account creation under this email has already been sent, and is waiting to be processed."
+			});
+			return;
+		}
+
+		let request = new AccountRequest({
+			first_name: first_name,
+			last_name: last_name,
+			email: email
+		});
+		request
+			.save()
+			.then(result => {
+				request.send_email();
+				res.redirect("/register/request/success");
+			})
+			.catch(err => {
+				res.render("account_request_form", {
+					error: `Unable to process request at this time. Internal Server Error`
+				});
+				return;
+			});
+	});
+
+router.get("/register/request/success", function(req, res) {
+	res.render("success", {
+		title: "Thank You!",
+		message:
+			"Your request has been recorded. You will be contacted by the email you entered after the request has been processed."
+	});
 });
 
 router
@@ -40,7 +104,7 @@ router
 
 		// get fields from body
 		let params = req.body;
-		if(!(params.username && params.password && params.password_confirm)) {
+		if (!(params.username && params.password && params.password_confirm)) {
 			res.render("register_form", {
 				user: users[id],
 				error: "Missing Required Fields"
@@ -61,7 +125,7 @@ router
 		}
 
 		//check if user un same email already exists
-    let registered_users = await User.find({ email: users[id].email });
+		let registered_users = await User.find({ email: users[id].email });
 		if (registered_users.length) {
 			res.render("register_form", {
 				user: users[id],
@@ -75,9 +139,9 @@ router
 			res.render("register_form", {
 				user: users[id],
 				error: "An account with this username already exists."
-      });
-      return;
-    }
+			});
+			return;
+		}
 
 		delete params.password_confirm;
 		Object.assign(params, {

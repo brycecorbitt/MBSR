@@ -1,0 +1,14 @@
+{
+	"mbsr_connection": {
+		"protocol": "http",
+		"host": "[MBSR_SERVER_DOMAIN_OR_IP]",
+		"port": 34543
+	},
+	"mailer": {
+		"service": "gmail",
+		"auth": {
+			"user": "[GMAIL_EMAIL]",
+			"pass": "[GMAIL_PASSWORD]"
+		}
+	}
+}
