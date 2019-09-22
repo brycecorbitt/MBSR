@@ -44,6 +44,8 @@ services:
       - CMS_PASSWORD=${CMS_ADMIN_PASSWORD}
       - CMS_PORT=1337
     restart: on-failure
+    volumes:
+      - ./config.json:/home/node/config.json
     depends_on:
       - db
       - strapi
