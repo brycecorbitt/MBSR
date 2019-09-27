@@ -35,6 +35,9 @@
 		D620644F233E6393007F3842 /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = D620644E233E6393007F3842 /* alarm.caf */; };
 		D6206451233E63A8007F3842 /* silence.caf in Resources */ = {isa = PBXBuildFile; fileRef = D6206450233E63A8007F3842 /* silence.caf */; };
 		D69D969D233E860800641E7F /* libRNLocalNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D969B233E836800641E7F /* libRNLocalNotifications.a */; };
+		D69D9827233E937300641E7F /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D9826233E937300641E7F /* libRNGestureHandler.a */; };
+		D69D9829233E93AB00641E7F /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D9828233E93AB00641E7F /* libRNSound.a */; };
+		D69D982B233E93C400641E7F /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D982A233E93C400641E7F /* libRNVectorIcons.a */; };
 		EE76E3B2885644D5988FED9B /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A96C43D4860242A381F50EA0 /* Fontisto.ttf */; };
 		F396FDE4BBAA470CA320F34F /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1500B75ED5FE436F967D8F9A /* AntDesign.ttf */; };
 		F6DE1BD6003F471C815AE713 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748E9FCCEE8840198CA297C1 /* Entypo.ttf */; };
@@ -330,6 +333,9 @@
 		D69D97DB233E8B5A00641E7F /* libjsi-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libjsi-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69D97DD233E8B5A00641E7F /* libjsiexecutor-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libjsiexecutor-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69D97DF233E8C0D00641E7F /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		D69D9826233E937300641E7F /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69D9828233E93AB00641E7F /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNSound.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69D982A233E93C400641E7F /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10852BC8CFD4C97BB8A83B8 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		E75CB4B092174ADFAA607B97 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		EBE7A865C919C3AC868125CB /* libPods-DoYouMindful.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoYouMindful.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,6 +358,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69D982B233E93C400641E7F /* libRNVectorIcons.a in Frameworks */,
+				D69D9829233E93AB00641E7F /* libRNSound.a in Frameworks */,
+				D69D9827233E937300641E7F /* libRNGestureHandler.a in Frameworks */,
 				D69D969D233E860800641E7F /* libRNLocalNotifications.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +458,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D69D982A233E93C400641E7F /* libRNVectorIcons.a */,
+				D69D9828233E93AB00641E7F /* libRNSound.a */,
+				D69D9826233E937300641E7F /* libRNGestureHandler.a */,
 				D69D97BF233E8B5A00641E7F /* libReact.a */,
 				D69D97C1233E8B5A00641E7F /* libReact.a */,
 				D69D97C3233E8B5A00641E7F /* libyoga.a */,
