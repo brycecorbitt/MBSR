@@ -1,5 +1,6 @@
 FROM node:10-alpine
 # NOTE: Remember to use --net="host" if running the container without docker-compose
+# Also, if you don't build using docker-compose, make sure you mount config.json as /home/node/config.json when building the image.
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 

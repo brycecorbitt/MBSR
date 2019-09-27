@@ -25,7 +25,10 @@ const launch_server = async function() {
         store: new MongoStore({ mongooseConnection: mongoose.connection }),
 				secret: "MY TEST SECRET", // Should be loaded from somehwere secure in production
 				saveUninitialized: false,
-				resave: false
+				resave: false,
+				cookie: {
+					maxAge: 1000*60*60*24*7*8 // Sessions are to expire after 8 weeks: the typical length of an MBSR course.
+				}
     }));
 
 	//configure pug as view engine for html pages
