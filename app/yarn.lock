@@ -5314,9 +5314,10 @@ react-native-gesture-handler@^1.4.1:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
-"react-native-local-notifications@https://github.com/wumke/react-native-local-notifications.git":
+react-native-local-notifications@2.0.0:
   version "2.0.0"
-  resolved "https://github.com/wumke/react-native-local-notifications.git#dc5efd2ccdc434dfbffe4ece90849d68902c7767"
+  resolved "https://registry.yarnpkg.com/react-native-local-notifications/-/react-native-local-notifications-2.0.0.tgz#13a41453102449cdbf56d855e7521867c34b4df1"
+  integrity sha512-rTKuohXC9ht03ySVooLuQ0FwzqHtrW9nG3BlIa0t+ZuJR7+VfLHdcfPzNHak8SuNITkKN2ta9JKHgbBnarkCoA==
 
 react-native-modal-datetime-picker@^7.5.0:
   version "7.5.0"

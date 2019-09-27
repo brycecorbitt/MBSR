@@ -7,7 +7,7 @@ import {
 } from 'react-navigation'; // Version can be specified in package.json
 import DropdownAlert from 'react-native-dropdownalert';
 import {createStackNavigator} from 'react-navigation-stack';
-import RNLocalNotifications from 'react-native-local-notifications';
+// import RNLocalNotifications from 'react-native-local-notifications';
 
 import DropDownHolder from './DropDownHolder';
 
@@ -64,7 +64,7 @@ const AppNavigator = createStackNavigator(
     headerMode: 'none',
   },
 );
-RNLocalNotifications.setAndroidIcons("ic_launcher", "mipmap", "notification_small", "drawable");
+// RNLocalNotifications.setAndroidIcons("ic_launcher", "mipmap", "notification_small", "drawable");
 // RNLocalNotifications.createNotification(1, 'Test Notification! Hopefully this works :)', '2019-09-22 17:55', 'default');
 const NavContainer = createAppContainer(AppNavigator);
 

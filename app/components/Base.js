@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View, ImageBackground } from "react-native";
+import { Image, View, ImageBackground, SafeAreaView } from "react-native";
 
 class Base extends React.Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class Base extends React.Component {
         style={{ width: "100%", height: "100%" }}
         source={require("../assets/background.jpg")}
       >
-        <View style={{ flex: 1, marginTop: 0, zIndex: 1}}>
+        <SafeAreaView style={{ flex: 1, marginTop: 0, zIndex: 1}}>
           
           <View style={{ flex: 1 }}>{logo}{this.props.children}</View>
-        </View>
+        </SafeAreaView>
       </ImageBackground>
     );
   }

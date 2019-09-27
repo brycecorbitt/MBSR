@@ -11,5 +11,10 @@ module.exports = {
         android: null, // disable Android platform, other platforms will still autolink if provided
       },
     },
+    'react-native-local-notifications': {
+      platforms: {
+        ios: null,
+      },
+    }
   },
 };

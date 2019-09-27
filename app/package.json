@@ -19,7 +19,7 @@
     "react-native-dropdownalert": "^4.2.0",
     "react-native-elements": "^1.1.0",
     "react-native-gesture-handler": "^1.4.1",
-    "react-native-local-notifications": "https://github.com/wumke/react-native-local-notifications.git",
+    "react-native-local-notifications": "2.0.0",
     "react-native-modal-datetime-picker": "^7.5.0",
     "react-native-sound": "^0.11.0",
     "react-native-vector-icons": "^6.6.0",
