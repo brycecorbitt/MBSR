@@ -28,6 +28,6 @@ RUN yarn install
 
 COPY --chown=node:node . .
 
-EXPOSE 34543
+EXPOSE ${CMS_PORT}
 
 CMD ["node", "app.js"]
