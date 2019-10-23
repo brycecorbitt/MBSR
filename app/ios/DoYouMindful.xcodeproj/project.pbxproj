@@ -34,6 +34,7 @@
 		D316B494850143CD931C8385 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 273FB0B8EB2444878F3E7309 /* Zocial.ttf */; };
 		D620644F233E6393007F3842 /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = D620644E233E6393007F3842 /* alarm.caf */; };
 		D6206451233E63A8007F3842 /* silence.caf in Resources */ = {isa = PBXBuildFile; fileRef = D6206450233E63A8007F3842 /* silence.caf */; };
+		D69692962360A6EC00D2343D /* timer.wav in Resources */ = {isa = PBXBuildFile; fileRef = D696928D2360A6EC00D2343D /* timer.wav */; };
 		D69D969D233E860800641E7F /* libRNLocalNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D969B233E836800641E7F /* libRNLocalNotifications.a */; };
 		D69D9827233E937300641E7F /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D9826233E937300641E7F /* libRNGestureHandler.a */; };
 		D69D9829233E93AB00641E7F /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D9828233E93AB00641E7F /* libRNSound.a */; };
@@ -299,6 +300,7 @@
 		D65EB44D233E769A006B3C35 /* libReact-RCTText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65EB44F233E769A006B3C35 /* libReact-RCTVibration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTVibration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65EB451233E769A006B3C35 /* libReact-RCTWebSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTWebSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D696928D2360A6EC00D2343D /* timer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timer.wav; path = ../assets/timer.wav; sourceTree = "<group>"; };
 		D69D969E233E894E00641E7F /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69D96A0233E894E00641E7F /* libReact-cxxreact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-cxxreact.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69D96A2233E894E00641E7F /* libReact-DevSupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-DevSupport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,6 +444,7 @@
 				D6206450233E63A8007F3842 /* silence.caf */,
 				D620644E233E6393007F3842 /* alarm.caf */,
 				D6581EF228D245D18C3A2F49 /* FontAwesome5_Regular.ttf */,
+				D696928D2360A6EC00D2343D /* timer.wav */,
 				870930B96CF042D28887C409 /* FontAwesome5_Solid.ttf */,
 				A96C43D4860242A381F50EA0 /* Fontisto.ttf */,
 				689BFCD42288404397342975 /* Foundation.ttf */,
@@ -698,9 +701,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 3CGE2R295W;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 3CGE2R295W;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -901,6 +906,7 @@
 				D6206451233E63A8007F3842 /* silence.caf in Resources */,
 				D620644F233E6393007F3842 /* alarm.caf in Resources */,
 				C671D867635B45F2A96CCC54 /* MaterialIcons.ttf in Resources */,
+				D69692962360A6EC00D2343D /* timer.wav in Resources */,
 				4FD7B938ED954AD59080DFC7 /* Octicons.ttf in Resources */,
 				4442EE6EDA7C45D095960090 /* SimpleLineIcons.ttf in Resources */,
 				D316B494850143CD931C8385 /* Zocial.ttf in Resources */,
@@ -1242,6 +1248,7 @@
 			baseConfigurationReference = 64A21510833807C73F8E9CD9 /* Pods-DoYouMindfulTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3CGE2R295W;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1271,6 +1278,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 3CGE2R295W;
 				INFOPLIST_FILE = DoYouMindfulTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1297,6 +1305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 3CGE2R295W;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1338,6 +1347,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DoYouMindful;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1350,6 +1360,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 3CGE2R295W;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1391,6 +1402,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DoYouMindful;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
