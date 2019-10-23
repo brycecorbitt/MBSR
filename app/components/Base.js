@@ -12,7 +12,7 @@ class Base extends React.Component {
     if(this.props.logo) {
       var logo = (
       <Image
-        style={{ flex: 1, marginTop: 30, marginBottom: 10, resizeMode: "contain" }}
+        style={{ flex: 1, marginTop: 30, marginBottom: 10, resizeMode: "contain" , maxWidth: "90%", alignSelf: "center"}}
         source={require("../assets/logo.png")}
       />)
       }
