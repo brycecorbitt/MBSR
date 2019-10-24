@@ -35,16 +35,9 @@ const launch_server = async function() {
 	app.set("view engine", "pug");
 	app.set("views", "./views");
 
-	//map api routes
-	var account_route = require("./routes/api/user/account");
-	app.use("/api/", account_route);
-
-	//map html routes
-	var register_form = require("./routes/html/register_form");
-	var recovery_form = require("./routes/html/recovery_form");
-	app.use("/", register_form);
-	app.use("/", recovery_form);
-
+	// map api & html routes
+	var routes = require('./routes');
+	app.use(routes);
 	app.get("/", (req, res) => res.render("home"));
 
 	const server = app.listen(port, () =>

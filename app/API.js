@@ -11,9 +11,10 @@ class API {
   }
 
   async check_session() {
-    let response = await this.get('/account').catch(err => {return {error: err}});
-    if(response.data)
-        this.user = response.data;
+    let response = await this.get('/account').catch(err => {
+      return {error: err};
+    });
+    if (response.data) this.user = response.data;
     return response;
   }
 
@@ -23,51 +24,59 @@ class API {
 
   async post(path, params) {
     let call = await fetch(`${this.url}/api${path}`, {
-      method: "POST",
-      credentials: "same-origin",
+      method: 'POST',
+      credentials: 'same-origin',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(params)
-    }).catch(err => {return {error: err}});
+      body: JSON.stringify(params),
+    }).catch(err => {
+      return {error: err};
+    });
 
-    if(!call.json)
-      return call;
+    if (!call.json) return call;
 
     return await call.json();
   }
 
   async get(path) {
     let call = await fetch(`${this.url}/api${path}`, {
-      method: "GET",
-      credentials: "same-origin",
+      method: 'GET',
+      credentials: 'same-origin',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-    }).catch(err => {return {error: err}});
+    }).catch(err => {
+      return {error: err};
+    });
 
-    if(!call.json)
-      return call;
+    if (!call.json) return call;
 
     return await call.json();
   }
 
+  // async get_page(path, page_size, page_number) {
+  //   url = `${path}?limit=${page_size}&start=${page_number * page_size}`;
+  //   return await this.get(url);
+  // }
+
   async login(username, password) {
-    let response = await this.post("/login", {username: username, password: password});
+    let response = await this.post('/login', {
+      username: username,
+      password: password,
+    });
 
     // save user data to instance if login was successful
-    if(!response.error && response.data)
-      this.user = response.data;
-    
+    if (!response.error && response.data) this.user = response.data;
+
     return response;
   }
 
   async logout() {
     this.user = null;
-    return await this.get("/logout");
-
+    return await this.get('/logout');
   }
 }
 
