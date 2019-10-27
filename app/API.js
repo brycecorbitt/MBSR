@@ -35,6 +35,8 @@ class API {
       return {error: err};
     });
 
+    if (!call.ok) return {error: call.statusText};
+
     if (!call.json) return call;
 
     return await call.json();
@@ -51,16 +53,21 @@ class API {
     }).catch(err => {
       return {error: err};
     });
+    if(!call.ok)
+      return {error: `${call.status}`};
 
     if (!call.json) return call;
 
-    return await call.json();
+    return await call.json().catch(err => {
+      return {error: err};
+    });
   }
 
-  // async get_page(path, page_size, page_number) {
-  //   url = `${path}?limit=${page_size}&start=${page_number * page_size}`;
-  //   return await this.get(url);
-  // }
+  async get_page(path, page_size, page_number) {
+    url = `${path}?limit=${page_size}&start=${page_number * page_size}`;
+    const result = await this.get(url);
+    return result;
+  }
 
   async login(username, password) {
     let response = await this.post('/login', {
@@ -77,6 +84,17 @@ class API {
   async logout() {
     this.user = null;
     return await this.get('/logout');
+  }
+
+  /**
+   * Takes the relative url path for a file conatined within a strapi content entry
+   * and converts it to a url that can be read by the MBSR Server
+   * (which then routes the desired file to the user)
+   */
+  convert_file_url(path) {
+    const base_path = '/uploads/';
+    if (path.startsWith(base_path)) path = path.slice(base_path.length);
+    return `${this.url}/api/content/file/${path}`;
   }
 }
 

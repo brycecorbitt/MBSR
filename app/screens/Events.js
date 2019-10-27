@@ -3,54 +3,23 @@ import { View, Text, FlatList, ActivityIndicator, StyleSheet, Image, RefreshCont
 import { Icon } from "react-native-elements";
 import moment from "moment";
 
-import Base from "../components/Base";
+import API from "../API";
+import ContentFeed from "../components/ContentFeed";
 import Button from "../components/Button";
+import Base from "../components/Base";
 import BottomNav from "../components/BottomNav";
 
 class Events extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state={
-      events: [],
-      loading: true,
-      refreshing: false
-    }
-  }
-
-  async callAPI() {
-    const eventsCall = await fetch('http://caroline.dyn.wpi.edu:1337/events');
-    const events = await eventsCall.json();
-    console.log(events)
-    this.setState({events: events, loading: false})
-  }
-
-  async componentDidMount() {
-    try {
-      await this.callAPI()
-    }
-    catch(err){
-      console.log(err);
-      this.setState({loading: false})
-    }
-  }
-
-  _onRefresh = () => {
-    this.setState({refreshing: true});
-    this.callAPI().then(() => {
-      this.setState({refreshing: false})
-    })
-  }
 
   renderItem(data){
     let item = data.item
-    console.log(item.date);
     if(item.date)
       formatted_date = moment(item.date, "YYYY-MM-DD HH:mm:ss").format('MMMM Do YYYY, h:mm a')
     else
       formatted_date = null;
     
     if(item.photo) {
+      console.log(API.convert_file_url(item.photo.url));
       return (
         <View style={{flexDirection: "row", marginBottom: 10}}>
           <View style={{flexDirection: "column", flex: 3}}>
@@ -61,7 +30,7 @@ class Events extends React.Component {
           </View>
           <Image
             style={{ flex: 1, resizeMode: "contain", marginLeft: 20 }}
-            source={{uri: "http://caroline.dyn.wpi.edu:1337" + item.photo.url}}
+            source={{uri: API.convert_file_url(item.photo.url)}}
           />
         </View>
       );
@@ -78,62 +47,41 @@ class Events extends React.Component {
     );
   }
 
-  renderItems() {
-    const {events, loading} = this.state
-    if(loading)
-      return (<ActivityIndicator/>);
-    return (<FlatList data={events} renderItem={this.renderItem} keyExtractor={(item) => String(item.id)}
-      refreshControl={<RefreshControl refreshing={this.state.refreshing} onRefresh={this._onRefresh}/>}
-    />);
-  }
-
   render() {
-    const {events, loading} = this.state;
     return (
       <Base>
         <View
           style={{
             flex: 1,
-            alignItems: "center",
-            alignSelf: "center",
-            flexDirection: "row",
-            justifyContent: "center"
+            alignItems: 'center',
+            alignSelf: 'center',
+            flexDirection: 'row',
+            justifyContent: 'center',
           }}
-          marginHorizontal="10%"
-        >
+          marginHorizontal="10%">
           <Icon
-            type="material-community"
-            name="calendar-text"
-            size={60}
-            color="#2e466c"
-            style={{ flex: 1.5 }}
-          />
+          type="material-community"
+          name="calendar-text"
+          size={60}
+          color="#2e466c"
+          style={{flex: 1.5}}
+        />
           <Text
             style={{
               fontSize: 28,
-              fontWeight: "bold",
-              color: "rgba(46,70,108,1)",
-              width: "100%",
-              textAlign: "center",
-              flex: .5
-            }}
-          >
-            Local Events
+              fontWeight: 'bold',
+              color: 'rgba(46,70,108,1)',
+              width: '100%',
+              textAlign: 'center',
+              flex: 0.5,
+            }}>
+            Events
           </Text>
         </View>
-        <View
-          style={{
-            flex: 6,
-            marginHorizontal: "5%",
-            marginVertical: 20,
-            justifyContent: "space-between"
-          }}
-        >
-          {this.renderItems()}
-        </View>
+        <ContentFeed title="Events" icon="calendar-text" endpoint="/content/events" renderItem={this.renderItem}></ContentFeed>
         <BottomNav
-          onBack={() => this.props.navigation.navigate("Home")}
-          onHome={() => this.props.navigation.navigate("Home")}
+          onBack={() => this.props.navigation.navigate('Home')}
+          onHome={() => this.props.navigation.navigate('Home')}
         />
       </Base>
     );
