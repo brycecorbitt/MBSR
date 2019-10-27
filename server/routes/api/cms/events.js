@@ -13,11 +13,9 @@ router.get("/events", async function(req, res, next) {
   current_date = new Date(current_date - new Date().getTimezoneOffset() * 1000 * 60);
 
 	if (limit && start != undefined)
-		var entries = await strapi.axios.get("/events", {
-			query: { _limit: limit, _start: start, _sort: "date:asc" }
-		});
+		var entries = await strapi.axios.get(`/events?_limit=${limit}&_start=${start}&_sort=date:asc`);
 	else
-		var entries = await strapi.request("/events", {
+		var entries = await strapi.request("/events?_sort=date:asc", {
 			params: { _sort: "date:asc" }
 		});
   
