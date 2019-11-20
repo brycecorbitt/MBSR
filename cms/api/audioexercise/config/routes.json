@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/audioexercises",
+      "handler": "Audioexercise.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/audioexercises/count",
+      "handler": "Audioexercise.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/audioexercises/:_id",
+      "handler": "Audioexercise.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/audioexercises",
+      "handler": "Audioexercise.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/audioexercises/:_id",
+      "handler": "Audioexercise.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/audioexercises/:_id",
+      "handler": "Audioexercise.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
