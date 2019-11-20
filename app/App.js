@@ -22,6 +22,8 @@ import Settings from './screens/Settings';
 import Login from './screens/Login';
 import Account from './screens/Account';
 import Recover from './screens/Recover';
+import AudioExercises from './screens/AudioExercises';
+import VideoExercises from './screens/VideoExercises';
 
 const AppNavigator = createStackNavigator(
   {
@@ -57,6 +59,12 @@ const AppNavigator = createStackNavigator(
     },
     Recover: {
       screen: Recover
+    },
+    AudioExercises: {
+      screen: AudioExercises
+    },
+    VideoExercises: {
+      screen: VideoExercises
     }
   },
   {

@@ -188,6 +188,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-webview')
     implementation project(':react-native-local-notifications')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
