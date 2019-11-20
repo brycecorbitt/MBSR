@@ -1,0 +1,5 @@
+{
+  "serve_content_range": {
+    "enabled": true
+  }
+}
