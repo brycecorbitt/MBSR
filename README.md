@@ -56,6 +56,8 @@ This is the default admin account created on the initial startup of the CMS serv
 	react-native start &
 	react-native run-android
 	```
+	
+	**NOTE:**  If the back-end is running on localhost and app is unable to connect through the emulator, you may need to change the mbsr_connection in [config.json](https://github.com/brycecorbitt/MBSR/blob/master/config.json) to your computer's local ip address. This issue occurs when the emulator's network is behind a NAT and localhost for the emulator is different than localhost for the host machine.
 
 When everything is set up, the CMS web portal can be used to add/modify/remove the content that gets streamed to the app:
 
