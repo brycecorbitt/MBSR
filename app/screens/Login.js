@@ -36,7 +36,7 @@ class Login extends React.Component {
     this.setState({loading: true});
     API.login(username, password).then(res => {
       this.setState({loading: false});
-      if(res.error)
+      if('error' in res)
         DropDownHolder.throwError(res.error);
       else
         this.props.navigation.navigate('Account');

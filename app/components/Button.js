@@ -43,11 +43,11 @@ class Button extends React.Component {
 
 
     return (
-      <TouchableOpacity onPress={this.props.onPress} style={[styles.Button, color]}>
+      <TouchableOpacity onPress={this.props.onPress} style={[styles.Button, color, this.props.style]}>
         {this.getStartIcon()}
         <Text
           style={
-            [color, styles.Text, centered]
+            [color, styles.Text, centered, this.props.text_style]
           }
         >
           {this.props.title}
@@ -99,13 +99,13 @@ const styles = StyleSheet.create({
 
   IconLeft: {
     // flex: 1
-    paddingLeft: 10,
-    paddingRight: 15,
+    paddingLeft: 5,
+    paddingRight: 10,
   },
   IconRight: {
     // flex: 1
-    paddingLeft: 15,
-    paddingRight: 10
+    paddingLeft: 10,
+    paddingRight: 5
   }
 });
 

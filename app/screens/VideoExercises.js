@@ -22,6 +22,7 @@ class VideoExercises extends React.Component {
               originWhitelist={['*']}
               mediaPlaybackRequiresUserAction={true}
               allowsFullscreenVideo={true}
+              useWebkit
               // source={{uri: url}}\
               source={{html: `
               <video width="100%" height="100%" style="background-color:transparent; overflow: hidden;" controls>

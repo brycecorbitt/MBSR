@@ -34,8 +34,14 @@ class API {
     }).catch(err => {
       return {error: err};
     });
-
-    if (!call.ok) return {error: call.statusText};
+    if (!call.ok) {
+      let json_response = '';
+      if ('json' in call)
+        json_response = await call.json();
+        if ('error' in json_response);
+        return json_response;
+      return {error: call.statusText || call.status}
+    }
 
     if (!call.json) return call;
 
@@ -53,10 +59,16 @@ class API {
     }).catch(err => {
       return {error: err};
     });
-    if(!call.ok)
-      return {error: `${call.status}`};
+    if (!call.ok) {
+      let json_response = '';
+      if ('json' in call)
+        json_response = await call.json();
+        if ('error' in json_response);
+        return json_response;
+      return {error: call.statusText || call.status}
+    }
 
-    if (!call.json) return call;
+    if (!('json' in call)) return call;
 
     return await call.json().catch(err => {
       return {error: err};
@@ -76,8 +88,7 @@ class API {
     });
 
     // save user data to instance if login was successful
-    if (!response.error && response.data) this.user = response.data;
-
+    if (!('error' in response) && response.data) this.user = response.data;
     return response;
   }
 
