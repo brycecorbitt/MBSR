@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_exercises",
+  "info": {
+    "name": "Video Exercise"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 64
+    },
+    "source": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

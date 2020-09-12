@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audio_exercises",
+  "info": {
+    "name": "Audio Exercise"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 64
+    },
+    "source": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

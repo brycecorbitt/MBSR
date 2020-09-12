@@ -5,8 +5,9 @@ var proxy = require('express-http-proxy');
 
 const router = express.Router();
 
-router.get("/file/*", proxy(`${strapi.axios.defaults.baseURL}`,{
+router.all("/file/*", proxy(`${strapi.defaults.baseURL}`,{
   proxyReqPathResolver: function (req) {
+    console.log(req.url)
     return req.url.replace('file', 'uploads');
   }}))
 

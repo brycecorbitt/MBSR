@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const morgan = require("morgan");
+const cors = require("cors");
+
 const MongoStore = require("connect-mongo")(session);
 const mongoose_connection = require("./db/database");
 const cms = require("./strapi_init");
@@ -18,6 +20,7 @@ const launch_server = async function() {
 	const app = express();
 	const port = process.env.SERVER_PORT || 34543;
 
+	app.use(cors());
 	app.use(bodyParser.json());
 		app.use(bodyParser.urlencoded({ extended: true }));
 		app.use(morgan('tiny'));

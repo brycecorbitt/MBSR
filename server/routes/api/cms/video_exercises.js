@@ -10,11 +10,9 @@ router.get("/video_ex", async function(req, res, next) {
 
 
 	if (limit && start != undefined)
-		var entries = await strapi.axios.get(`/videoexercises?_limit=${limit}&_start=${start}&_sort=date:asc`);
+		var entries = await strapi.get(`/video-exercises?_limit=${limit}&_start=${start}&_sort=date:asc`);
 	else
-		var entries = await strapi.request("/videoexercises?_sort=date:asc", {
-			params: { _sort: "date:asc" }
-		});
+		var entries = await strapi.request("/video-exercises?_sort=date:asc");
   
 	res.send(entries.data);
 });

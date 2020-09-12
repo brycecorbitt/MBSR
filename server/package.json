@@ -9,9 +9,11 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.0.0",
+    "cors": "^2.8.5",
     "csv-load-sync": "^1.0.0",
     "express": "^4.17.1",
     "express-http-proxy": "^1.6.0",
@@ -22,7 +24,6 @@
     "pug": "^2.0.4",
     "shorthash": "^0.0.2",
     "shortid": "^2.2.15",
-    "strapi-sdk-javascript": "^0.3.1",
     "validator": "^11.1.0"
   }
 }

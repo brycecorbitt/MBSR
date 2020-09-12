@@ -12,7 +12,7 @@ services:
       - ./db:/data/db
 
   strapi:
-    image: strapi/strapi
+    image: strapi/strapi:3.1.4
     network_mode: "host"
     environment:
       - APP_NAME=cms
@@ -30,7 +30,7 @@ services:
     volumes:
       - type: bind
         source: ./cms
-        target: /usr/src/api/cms
+        target: /srv/app
     depends_on:
       - db
 

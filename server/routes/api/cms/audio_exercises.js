@@ -10,11 +10,9 @@ router.get("/audio_ex", async function(req, res, next) {
 
 
 	if (limit && start != undefined)
-		var entries = await strapi.axios.get(`/audioexercises?_limit=${limit}&_start=${start}&_sort=date:asc`);
+		var entries = await strapi.get(`/audio-exercises?_limit=${limit}&_start=${start}&_sort=date:asc`);
 	else
-		var entries = await strapi.request("/audioexercises?_sort=date:asc", {
-			params: { _sort: "date:asc" }
-		});
+		var entries = await strapi.get("/audio-exercises?_sort=date:asc");
   
 	res.send(entries.data);
 });

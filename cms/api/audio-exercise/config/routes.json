@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/events",
-      "handler": "event.find",
+      "path": "/audio-exercises",
+      "handler": "audio-exercise.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/events/count",
-      "handler": "event.count",
+      "path": "/audio-exercises/count",
+      "handler": "audio-exercise.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/events/:id",
-      "handler": "event.findOne",
+      "path": "/audio-exercises/:id",
+      "handler": "audio-exercise.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/events",
-      "handler": "event.create",
+      "path": "/audio-exercises",
+      "handler": "audio-exercise.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/events/:id",
-      "handler": "event.update",
+      "path": "/audio-exercises/:id",
+      "handler": "audio-exercise.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/events/:id",
-      "handler": "event.delete",
+      "path": "/audio-exercises/:id",
+      "handler": "audio-exercise.delete",
       "config": {
         "policies": []
       }
