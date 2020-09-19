@@ -5,14 +5,16 @@ A platform to provide resources for Mindfullness Based Stress Reduction from res
  - Install `docker` and `docker-compose`
  - Clone the repo:
 	  `git clone https://github.com/brycecorbitt/MBSR.git`
- - Edit the [config.json](https://github.com/brycecorbitt/MBSR/blob/master/config.json) to include the domain or ip address the server will listen on:
+ - Edit the [config.json](https://github.com/brycecorbitt/MBSR/blob/master/config.json) to include the domain or ip address app will use to connect to the server:
 	 ```json
 		"mbsr_connection": {
 			"protocol": "http",
-			"host": "localhost",
+			"host": "[local_ip]",
 			"port": 34543
 		}
 	```
+	***NOTE***: *`localhost` should **not** be used as the address in this configuration file, as the mobile app will loop back go the device's `localhost` and be unable to connect to the server. If the mobile device is running on the same network as the server, the server's local ip address may be used.*
+
 - *Optionally*, you may also add the username and password of a gmail account to the [config.json](https://github.com/brycecorbitt/MBSR/blob/master/config.json) to enable account registration, creation, and recovery requests:
 	 ```json
 	"mailer": {
