@@ -4,6 +4,7 @@ import { WebView } from "react-native-webview";
 import { Icon } from "react-native-elements";
 
 import API from "../API";
+import VideoPlayer from '../components/VideoPlayer'
 import ContentFeed from "../components/ContentFeed";
 import Base from "../components/Base";
 import BottomNav from "../components/BottomNav";
@@ -13,12 +14,11 @@ class VideoExercises extends React.Component {
   renderItem(data){
     let item = data.item;
     let url = API.convert_file_url(item.source.url);
-    
       return (
         <View style={{flexDirection: "row", marginBottom: 10}}>
           <View style={styles.entry}>
             <Text style={styles.VideoTitle}>{item.title}</Text>
-            <WebView
+            {/* <WebView
               originWhitelist={['*']}
               mediaPlaybackRequiresUserAction={true}
               allowsFullscreenVideo={true}
@@ -34,6 +34,10 @@ class VideoExercises extends React.Component {
               overScrollMode={"never"}
               onError={function(e){console.log(e)}}
               // source={{html: `<video src="${url}">`}}
+            /> */}
+            <VideoPlayer
+              source={{uri: url}}
+              // navigator={global.navigator}
             />
           </View>
         </View>
@@ -72,7 +76,7 @@ class VideoExercises extends React.Component {
             Video Exercises
           </Text>
         </View>
-        <ContentFeed endpoint="/content/video_ex" renderItem={this.renderItem}></ContentFeed>
+        <ContentFeed endpoint="/content/video_ex" renderItem={this.renderItem} navigator={this.props.navigation}></ContentFeed>
         <BottomNav
           onBack={() => this.props.navigation.navigate('Exercises')}
           onHome={() => this.props.navigation.navigate('Home')}

@@ -23,6 +23,8 @@
     "react-native-modal-datetime-picker": "^7.5.0",
     "react-native-sound": "^0.11.0",
     "react-native-vector-icons": "^6.6.0",
+    "react-native-video": "^5.1.0-alpha8",
+    "react-native-video-controls": "^2.6.0",
     "react-native-webview": "^7.5.1",
     "react-navigation": "^4.0.0",
     "react-navigation-stack": "^1.5.1"
