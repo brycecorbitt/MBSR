@@ -17,6 +17,7 @@ const route_paths = function(proc_path, mod_path, endpoint) {
 route_paths('./routes/html', './html')
 route_paths('./routes/api/user', './api/user', '/api');
 route_paths('./routes/api/cms', './api/cms', '/api/content')
+route_paths('./routes/api/event', './api/event', '/api/event')
 
 
 module.exports = router;

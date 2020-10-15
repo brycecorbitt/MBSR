@@ -19,6 +19,7 @@ import AudioExercises from './screens/AudioExercises';
 import VideoExercises from './screens/VideoExercises';
 
 import DropDownHolder from './DropDownHolder';
+import LogEvent from './event'
 
 const stack = createStackNavigator();
 const forFade = ({ current }) => ({
@@ -26,66 +27,88 @@ const forFade = ({ current }) => ({
     opacity: current.progress,
   },
 });
+let prior_screen = null
+let new_screen = null
+const focus_listener =({navigation, route}) => ({
+  focus: (e) => {
+    new_screen = route.name
+    LogEvent.logNavigationEvent(prior_screen, new_screen).catch((err) => {console.error(err)})
+    prior_screen = new_screen
+  },
+})
 
 function RootStack(){
   return (
     <stack.Navigator 
     initialRouteName="Home"
     headerMode='none'
-    screenOptions={{ cardStyleInterpolator: forFade }}
+    screenOptions={{ cardStyleInterpolator: forFade}}
     >
       <stack.Screen
         name="Home"
         component={Home}
+        listeners={focus_listener}
         options={{title: 'DoYouMindful'}}
       />
       <stack.Screen 
         name="About"
         component={About}
+        listeners={focus_listener}
       />
       <stack.Screen 
         name="Exercises"
         component={Exercises}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Calendar"
         component={Calendar}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Timer"
         component={Timer}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Inspiration"
         component={Inspiration}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Events"
         component={Events}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Settings"
         component={Settings}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Login"
         component={Login}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Account"
         component={Account}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="Recover"
         component={Recover}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="AudioExercises"
         component={AudioExercises}
+        listeners={focus_listener}
       />
       <stack.Screen
         name="VideoExercises"
         component={VideoExercises}
+        listeners={focus_listener}
       />
     </stack.Navigator>
   )

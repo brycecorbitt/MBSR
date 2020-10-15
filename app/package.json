@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint .",
     "postinstall": "npx jetify",
-    "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons && react-native link react-native-local-notifications"
+    "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons && react-native link react-native-local-notifications && react-native link react-native-device-info"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -19,6 +19,7 @@
     "react": "16.8.6",
     "react-native": "^0.60.5",
     "react-native-countdown-component": "^2.5.2",
+    "react-native-device-info": "^6.2.0",
     "react-native-dropdownalert": "^4.2.0",
     "react-native-elements": "^1.1.0",
     "react-native-gesture-handler": "^1.4.1",

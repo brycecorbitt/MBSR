@@ -27,7 +27,7 @@ const launch_server = async function() {
     app.use(session({
         store: new MongoStore({ mongooseConnection: mongoose.connection }),
 				secret: "MY TEST SECRET", // Should be loaded from somehwere secure in production
-				saveUninitialized: false,
+				saveUninitialized: true, // Persist sessions even when nothing has been stored with the session yet
 				resave: false,
 				cookie: {
 					maxAge: 1000*60*60*24*7*8 // Sessions are to expire after 8 weeks: the typical length of an MBSR course.
