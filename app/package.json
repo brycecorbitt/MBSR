@@ -9,18 +9,24 @@
     "test": "jest",
     "lint": "eslint .",
     "postinstall": "npx jetify",
-    "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons"
+    "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons && react-native link react-native-local-notifications && react-native link react-native-device-info"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.7.5",
+    "@react-navigation/stack": "^5.9.2",
     "moment": "^2.24.0",
     "react": "16.8.6",
     "react-native": "^0.60.5",
     "react-native-countdown-component": "^2.5.2",
+    "react-native-device-info": "^6.2.0",
     "react-native-dropdownalert": "^4.2.0",
     "react-native-elements": "^1.1.0",
     "react-native-gesture-handler": "^1.4.1",
-    "react-native-local-notifications": "2.0.0",
+    "react-native-local-notifications": "https://github.com/wumke/react-native-local-notifications#4cd6bc41ca8491e419e4543c9c418f4e9a0de802",
     "react-native-modal-datetime-picker": "^7.5.0",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-screens": "^2.11.0",
     "react-native-sound": "^0.11.0",
     "react-native-vector-icons": "^6.6.0",
     "react-native-video": "^5.1.0-alpha8",
@@ -30,8 +36,8 @@
     "react-navigation-stack": "^1.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
+    "@babel/core": "^7.11.6",
+    "@babel/runtime": "^7.11.2",
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.3.0",

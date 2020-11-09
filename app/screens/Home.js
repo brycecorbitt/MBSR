@@ -4,7 +4,15 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
 import API from '../API';
 import Base from '../components/Base';
+import LogEvents from '../event'
 // import Button from '../components/Button'
+const on_press = function(evt, id=null){
+  const route = 'Home'
+  const timestamp = evt.timeStamp
+  const {pageX, pageY, locationX, locationY} = evt.nativeEvent
+  LogEvents.logButtonPressEvent(route, id, pageX, pageY, locationX, locationY, timestamp).catch(err => {console.error(err)})
+}
+
 
 class MenuItem extends React.Component {
   render() {
@@ -70,7 +78,7 @@ class Home extends React.Component {
       <View style={{position:'absolute',top:0, zIndex: 2, alignContent: 'flex-start'}}>
         <TouchableOpacity
           style={{flexDirection: 'row'}}
-          onPress={() => {
+          onPress={(evt) => {
             this.props.navigation.navigate('Account');
           }}>
             <Icon
@@ -106,32 +114,44 @@ class Home extends React.Component {
           <MenuItem
             title="About Mindfulness"
             icon="lightbulb-outline"
-            path={() => this.props.navigation.navigate('About')}
+            path={(evt) => {            
+              on_press(evt, 'nav_about')
+            this.props.navigation.navigate('About')}}
           />
           <MenuItem
             title="Mindfulness Exercises"
             icon="human-handsup"
-            path={() => this.props.navigation.navigate('Exercises')}
+            path={(evt) => {            
+              on_press(evt, 'nav_exercises')
+              this.props.navigation.navigate('Exercises')}}
           />
           <MenuItem
             title="Schedule Reminder"
             icon="calendar"
-            path={() => this.props.navigation.navigate('Calendar')}
+            path={(evt) => {            
+              on_press(evt, 'nav_calendar')
+              this.props.navigation.navigate('Calendar')}}
           />
           <MenuItem
             title="Practice Timer"
             icon="timer-sand"
-            path={() => this.props.navigation.navigate('Timer')}
+            path={(evt) => {            
+              on_press(evt, 'nav_timer')
+              this.props.navigation.navigate('Timer')}}
           />
           <MenuItem
             title="Inspirational Corner"
             icon="format-quote-close"
-            path={() => this.props.navigation.navigate('Inspiration')}
+            path={(evt) => {            
+              on_press(evt, 'nav_inspiration')
+              this.props.navigation.navigate('Inspiration')}}
           />
           <MenuItem
             title="Local Events"
             icon="routes"
-            path={() => this.props.navigation.navigate('Events')}
+            path={(evt) => {            
+              on_press(evt, 'nav_events')
+              this.props.navigation.navigate('Events')}}
           />
         </View>
       </Base>

@@ -190,7 +190,9 @@ android {
 dependencies {
     implementation project(':react-native-video')
     implementation project(':react-native-webview')
+    implementation project(':react-native-device-info')
     implementation project(':react-native-local-notifications')
+    implementation project(':react-native-webview')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])

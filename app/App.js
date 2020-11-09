@@ -1,15 +1,8 @@
 import React from 'react';
-import {View, Text, Button, TouchableOpacity} from 'react-native';
-import {
-  createAppContainer,
-  StackActions,
-  NavigationActions,
-} from 'react-navigation'; // Version can be specified in package.json
+import {View} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import DropdownAlert from 'react-native-dropdownalert';
-import {createStackNavigator} from 'react-navigation-stack';
-// import RNLocalNotifications from 'react-native-local-notifications';
-
-import DropDownHolder from './DropDownHolder';
 
 import Home from './screens/Home';
 import About from './screens/About';
@@ -25,69 +18,118 @@ import Recover from './screens/Recover';
 import AudioExercises from './screens/AudioExercises';
 import VideoExercises from './screens/VideoExercises';
 
-const AppNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: Home,
-    },
-    About: {
-      screen: About,
-    },
-    Exercises: {
-      screen: Exercises,
-    },
-    Calendar: {
-      screen: Calendar,
-    },
-    Timer: {
-      screen: Timer,
-    },
-    Inspiration: {
-      screen: Inspiration,
-    },
-    Events: {
-      screen: Events,
-    },
-    Settings: {
-      screen: Settings,
-    },
-    Login: {
-      screen: Login,
-    },
-    Account: {
-      screen: Account,
-    },
-    Recover: {
-      screen: Recover
-    },
-    AudioExercises: {
-      screen: AudioExercises
-    },
-    VideoExercises: {
-      screen: VideoExercises
-    }
+import DropDownHolder from './DropDownHolder';
+import LogEvent from './event'
+
+const stack = createStackNavigator();
+const forFade = ({ current }) => ({
+  cardStyle: {
+    opacity: current.progress,
   },
-  {
-    initialRouteName: 'Home',
-    headerMode: 'none',
+});
+let prior_screen = null
+let new_screen = null
+const focus_listener =({navigation, route}) => ({
+  focus: (e) => {
+    new_screen = route.name
+    LogEvent.logNavigationEvent(prior_screen, new_screen).catch((err) => {console.error(err)})
+    prior_screen = new_screen
   },
-);
+})
+
+function RootStack(){
+  return (
+    <stack.Navigator 
+    initialRouteName="Home"
+    headerMode='none'
+    screenOptions={{ cardStyleInterpolator: forFade}}
+    >
+      <stack.Screen
+        name="Home"
+        component={Home}
+        listeners={focus_listener}
+        options={{title: 'DoYouMindful'}}
+      />
+      <stack.Screen 
+        name="About"
+        component={About}
+        listeners={focus_listener}
+      />
+      <stack.Screen 
+        name="Exercises"
+        component={Exercises}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Calendar"
+        component={Calendar}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Timer"
+        component={Timer}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Inspiration"
+        component={Inspiration}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Events"
+        component={Events}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Settings"
+        component={Settings}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Login"
+        component={Login}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Account"
+        component={Account}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="Recover"
+        component={Recover}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="AudioExercises"
+        component={AudioExercises}
+        listeners={focus_listener}
+      />
+      <stack.Screen
+        name="VideoExercises"
+        component={VideoExercises}
+        listeners={focus_listener}
+      />
+    </stack.Navigator>
+  )
+
+} 
 // RNLocalNotifications.setAndroidIcons("ic_launcher", "mipmap", "notification_small", "drawable");
 // RNLocalNotifications.createNotification(1, 'Test Notification! Hopefully this works :)', '2019-09-22 17:55', 'default');
-const NavContainer = createAppContainer(AppNavigator);
 
 class App extends React.Component {
   render() {
     return (
       <View>
-      <View style={{width: '100%', height: '100%'}}>
-        <NavContainer />
-      </View>
-      <DropdownAlert ref={(ref) => DropDownHolder.setDropDown(ref)} />
+        <DropdownAlert ref={(ref) => {DropDownHolder.setDropDown(ref)}} />
+        <View style={{width: '100%', height: '100%'}}>
+          <NavigationContainer>
+            <RootStack/>
+          </NavigationContainer>
+        </View>
       </View>
     );
   }
 }
-
 export default App;
 

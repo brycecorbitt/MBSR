@@ -1,5 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import LogEvents from "../event"
+import { useRoute } from "@react-navigation/native"
 // import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { Icon } from "react-native-elements";
@@ -36,6 +38,17 @@ class Button extends React.Component {
     return null;
   }
 
+  onPress(evt) {
+    const id = this.props.id || null
+    const route = this.props.route
+    const timestamp = evt.timeStamp
+    const {pageX, pageY, locationX, locationY} = evt.nativeEvent
+    LogEvents.logButtonPressEvent(route.name, id, pageX, pageY, locationX, locationY, timestamp).catch(err => {console.error(err)})
+    if(this.props.onPress){
+      this.props.onPress()
+    }
+  }
+
   render() {
     let color = this.props.secondary? styles.Secondary : styles.Primary;
     let centered = this.props.centered? styles.Centered : null;
@@ -43,7 +56,7 @@ class Button extends React.Component {
 
 
     return (
-      <TouchableOpacity onPress={this.props.onPress} style={[styles.Button, color, this.props.style]}>
+      <TouchableOpacity onPress={(ev) => {this.onPress(ev)}} style={[styles.Button, color, this.props.style]}>
         {this.getStartIcon()}
         <Text
           style={
@@ -109,4 +122,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Button;
+export default function(props) {
+  const route = useRoute();
+  return <Button {...props} route={route}/>
+};
