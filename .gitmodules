@@ -1,0 +1,6 @@
+[submodule "app/app/mbsr-react-native-video-controls"]
+	path = app/app/mbsr-react-native-video-controls
+	url = https://github.com/brycecorbitt/mbsr-react-native-video-controls.git
+[submodule "app/mbsr-react-native-video-controls"]
+	path = app/mbsr-react-native-video-controls
+	url = https://github.com/brycecorbitt/mbsr-react-native-video-controls.git

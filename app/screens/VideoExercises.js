@@ -1,7 +1,6 @@
 import React from "react";
-import { View, Text, FlatList, ActivityIndicator, StyleSheet, Image, RefreshControl} from "react-native";
-import { WebView } from "react-native-webview";
-import { Icon } from "react-native-elements";
+import { View, Text, StyleSheet} from "react-native";
+import { Icon } from "react-native-elements"
 
 import API from "../API";
 import VideoPlayer from '../components/VideoPlayer'
@@ -10,6 +9,9 @@ import Base from "../components/Base";
 import BottomNav from "../components/BottomNav";
 
 class VideoExercises extends React.Component {
+  constructor(props){
+    super(props)
+  }
 
   renderItem(data){
     let item = data.item;
@@ -18,27 +20,7 @@ class VideoExercises extends React.Component {
         <View style={{flexDirection: "row", marginBottom: 10}}>
           <View style={styles.entry}>
             <Text style={styles.VideoTitle}>{item.title}</Text>
-            {/* <WebView
-              originWhitelist={['*']}
-              mediaPlaybackRequiresUserAction={true}
-              allowsFullscreenVideo={true}
-              useWebkit
-              // source={{uri: url}}\
-              source={{html: `
-              <video width="100%" height="100%" style="background-color:transparent; overflow: hidden;" controls>
-                  <source src="${url}">
-              </video`}}
-              style={{backgroundColor: "black", overflow: "hidden"}}
-              containerStyle={{ flex: 0, marginTop: 20, height: 200, overflow: "hidden", backgroundColor: "transparent"}}
-              scrollEnabled={false}
-              overScrollMode={"never"}
-              onError={function(e){console.log(e)}}
-              // source={{html: `<video src="${url}">`}}
-            /> */}
-            <VideoPlayer
-              source={{uri: url}}
-              // navigator={global.navigator}
-            />
+              <VideoPlayer source={{uri: url}}/>
           </View>
         </View>
       );
@@ -76,7 +58,7 @@ class VideoExercises extends React.Component {
             Video Exercises
           </Text>
         </View>
-        <ContentFeed endpoint="/content/video_ex" renderItem={this.renderItem} navigator={this.props.navigation}></ContentFeed>
+        <ContentFeed endpoint="/content/video_ex" renderItem={this.renderItem} navigator={this.props.navigation}/>
         <BottomNav
           onBack={() => this.props.navigation.navigate('Exercises')}
           onHome={() => this.props.navigation.navigate('Home')}

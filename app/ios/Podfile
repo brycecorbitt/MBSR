@@ -42,6 +42,8 @@ target 'DoYouMindful' do
   pod 'react-native-video', :path => '../node_modules/react-native-video'
   pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
 
+  pod 'react-native-orientation-locker', :path => '../node_modules/react-native-orientation-locker'
+
   target 'DoYouMindfulTests' do
     inherit! :search_paths
     # Pods for testing

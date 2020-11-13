@@ -67,7 +67,8 @@ class Home extends React.Component {
 
   componentWillUnmount() {
     // Remove the event listener
-    this.focusListener.remove();
+    if(this.focusListener && this.focusListener.remove)
+      this.focusListener.remove();
   }
 
 

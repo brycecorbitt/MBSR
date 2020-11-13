@@ -3,6 +3,8 @@ package com.doyoumindful;
 import android.app.NotificationManager;
 import android.content.Context;
 import com.facebook.react.ReactActivity;
+import android.content.Intent; // react-native-orientation
+import android.content.res.Configuration; // react-native-orientation
 
 public class MainActivity extends ReactActivity {
 
@@ -13,6 +15,14 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "DoYouMindful";
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Intent intent = new Intent("onConfigurationChanged");
+        intent.putExtra("newConfig", newConfig);
+        this.sendBroadcast(intent);
     }
 
     @Override

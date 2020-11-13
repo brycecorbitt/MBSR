@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import DropdownAlert from 'react-native-dropdownalert';
+import Orientation from 'react-native-orientation-locker'
 
 import Home from './screens/Home';
 import About from './screens/About';
@@ -116,6 +117,9 @@ function RootStack(){
 } 
 // RNLocalNotifications.setAndroidIcons("ic_launcher", "mipmap", "notification_small", "drawable");
 // RNLocalNotifications.createNotification(1, 'Test Notification! Hopefully this works :)', '2019-09-22 17:55', 'default');
+
+// Lock to Portrait orientation on startup (technically this is async, but we don't need to wait for it to complete)
+Orientation.lockToPortrait()
 
 class App extends React.Component {
   render() {

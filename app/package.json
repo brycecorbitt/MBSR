@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint .",
     "postinstall": "npx jetify",
-    "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons && react-native link react-native-local-notifications && react-native link react-native-device-info"
+    "link-dependencies": "react-native link react-native-gesture-handler  && react-native link react-native-vector-icons && react-native link react-native-local-notifications && react-native link react-native-device-info && react-native link react-native-orientation-locker",
+    "use-local-video-controls": "cd mbsr-react-native-video-controls && npm i && cd .. && rm -rf node_modules/react-native-video-controls && ln -s ../mbsr-react-native-video-controls node_modules/react-native-video-controls",
+    "use-remote-video-controls": "rm -rf node_modules/react-native-video-controls && yarn upgrade react-native-video-controls"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -25,12 +27,13 @@
     "react-native-gesture-handler": "^1.4.1",
     "react-native-local-notifications": "https://github.com/wumke/react-native-local-notifications#4cd6bc41ca8491e419e4543c9c418f4e9a0de802",
     "react-native-modal-datetime-picker": "^7.5.0",
+    "react-native-orientation-locker": "^1.2.0",
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.11.0",
     "react-native-sound": "^0.11.0",
     "react-native-vector-icons": "^6.6.0",
     "react-native-video": "^5.1.0-alpha8",
-    "react-native-video-controls": "^2.6.0",
+    "react-native-video-controls": "https://github.com/brycecorbitt/mbsr-react-native-video-controls",
     "react-native-webview": "^7.5.1",
     "react-navigation": "^4.0.0",
     "react-navigation-stack": "^1.5.1"
