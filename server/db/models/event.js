@@ -15,20 +15,23 @@ const eventSchema = new mongoose.Schema({
 		type: String,
 		index: true
 	},
+	ip_address: {
+		type: String,
+		index: true
+	},
 	timestamp: {
 		type: Date,
 		required: true,
 		index: true
 	}
-}, {timestamps: { createdAt: true, updatedAt: false }})
+}, {
+	timestamps: false,
+	discriminatorKey: 'type'
+})
 
 const Event = mongoose.model('Event', eventSchema)
 
 const navigationEventSchema = new mongoose.Schema({
-	type: {
-		type: String,
-		default: 'navigation'
-	},
 	to: {
 		type: String,
 		required: true
@@ -40,10 +43,6 @@ const navigationEventSchema = new mongoose.Schema({
 })
 
 const buttonPressEventSchema = new mongoose.Schema({
-	type: {
-		type: String,
-		default: 'button_press'
-	},
 	screen: {
 		type: String,
 		required: true,
@@ -72,7 +71,59 @@ const buttonPressEventSchema = new mongoose.Schema({
 	}
 })
 
-const NavigationEvent = Event.discriminator('NavigationEvent', navigationEventSchema)
-const ButtonPressEvent = Event.discriminator('ButtonPressEvent', buttonPressEventSchema)
+const source = {type: String, required: true}
+const position = {type: Number, required: true}
+const duration = {type: Number, required: true}
 
-module.exports = {NavigationEvent: NavigationEvent, ButtonPressEvent: ButtonPressEvent}
+const videoToggleEventSchema = new mongoose.Schema({
+	action: {
+		type: String,
+		enum: ['play', 'pause'],
+	},
+	source,
+	position,
+	duration
+})
+
+const videoVolumeEventSchema = new mongoose.Schema({
+	action: {
+		type: String,
+		enum: ['start', 'release']
+	},
+	source,
+	position,
+	duration,
+	volume: {
+		type: Number,
+		required: true
+	}
+})
+
+const videoSeekEventSchema = new mongoose.Schema({
+	action: {
+		type: String,
+		enum: ['start', 'release']
+	},
+	source,
+	position,
+	duration
+})
+
+const videoFullscreenEventSchema = new mongoose.Schema({
+	action: {
+		type: String,
+		enum: ['maximize', 'minimize']
+	},
+	source,
+	position,
+	duration
+})
+
+const NavigationEvent = Event.discriminator('Navigation', navigationEventSchema)
+const ButtonPressEvent = Event.discriminator('ButtonPress', buttonPressEventSchema)
+const VideoToggleEvent = Event.discriminator('VideoToggle', videoToggleEventSchema)
+const VideoSeekEvent = Event.discriminator('VideoSeek', videoSeekEventSchema)
+const VideoVolumeEvent = Event.discriminator('VideoVolume', videoVolumeEventSchema)
+const VideoFullscreenEvent = Event.discriminator('VideoFullscreen', videoFullscreenEventSchema)
+
+module.exports = {NavigationEvent, ButtonPressEvent, VideoToggleEvent, VideoSeekEvent, VideoVolumeEvent, VideoFullscreenEvent}

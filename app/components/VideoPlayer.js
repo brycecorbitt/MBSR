@@ -2,6 +2,9 @@ import React from "react";
 import {StyleSheet, Dimensions, Modal} from "react-native"
 import VP from 'react-native-video-controls'
 import Orientation from 'react-native-orientation-locker'
+
+import LogEvent from '../event'
+
 const initial_orientation = Orientation.getInitialOrientation();
 let dim = Dimensions.get('window')
 const [screen_width, screen_height] = initial_orientation === 'LANDSCAPE'? [dim.width, dim.height] : [dim.height, dim.width]
@@ -19,13 +22,22 @@ class VideoPlayer extends React.Component {
     this.onProgress = this.onProgress.bind(this)
   }
 
+  async logEvent(action, params={}){
+    const source = this.props.source.uri
+    const position = this.player.state.currentTime
+    const duration = this.player.state.duration
+    return await LogEvent.logVideoEvent(action, source, position, duration, params)
+  }
+
   async onMaximize(){
     Orientation.lockToLandscape()
     this.setState({styles: fullscreen_styles, fullscreen: true, progress: this.player.state.currentTime, volume: this.player.state.volume})
+    this.logEvent('maximize')
   }
   async onMinimize(){
     Orientation.lockToPortrait()
     this.setState({styles: minimized_styles, fullscreen: false, progress: this.player.state.currentTime, volume: this.player.state.volume})
+    this.logEvent('minimize')
   }
 
   // For other events, we don't use setState() because we don't want to trigger a re-render when we don't need to
@@ -58,25 +70,25 @@ class VideoPlayer extends React.Component {
         this.state.paused = false
         this.player.player.controlTimeoutDelay = 5000 // Hide controls after 5 seconds of playing without interaction
         this.player.resetControlTimeout()
-        console.log('onPlay')
+        this.logEvent('play')
       }}
       onPause={() => {
         this.state.paused = true
         this.player.player.controlTimeoutDelay = 100000000000 // Keep controls shown while video is paused
         this.player.resetControlTimeout()
-        console.log('onPause')
+        this.logEvent('pause')
       }}
       onSeekStart={(time) => {
-        console.log('onSeekStart: ' + time)
+        this.logEvent('seek', {action: 'start', time})
       }}
       onSeekRelease={(time) => {
-        console.log('onSeekRelease: ' + time)
+        this.logEvent('seek', {action: 'release', time})
       }}
       onVolumeStart={(volume) => {
-        console.log('onVolumeStart: ' + volume)
+        this.logEvent('volume', {action: 'start', volume})
       }}
       onVolumeRelease={(volume) => {
-        console.log('onVolumeRelease: ' + volume)
+        this.logEvent('volume', {action: 'release', volume})
       }}
     />
       if(fullscreen)

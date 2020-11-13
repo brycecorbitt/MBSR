@@ -4,6 +4,10 @@
 		"host": "[MBSR_SERVER_DOMAIN_OR_IP]",
 		"port": 34543
 	},
+	"event_logging": {
+		"enabled": false,
+		"console": true
+	},
 	"mailer": {
 		"service": "gmail",
 		"auth": {
