@@ -14,7 +14,8 @@ class LogEvent {
     if(config.console === true)
       console.log(`[Event] ${type}: ${JSON.stringify(fields)}`)
     try {
-      return await API.post(`/event/${type}`, fields)
+      if(config.enabled === true)
+        return await API.post(`/event/${type}`, fields)
     } catch(err) {
       console.warn(`[Event] Failed to send: ${err}`)
     }
