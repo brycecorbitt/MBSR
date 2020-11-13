@@ -11,25 +11,24 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "false": "^0.0.4",
-    "strapi": "3.1.4",
-    "strapi-admin": "3.1.4",
-    "strapi-connector-mongoose": "3.1.4",
-    "strapi-plugin-content-manager": "3.1.4",
-    "strapi-plugin-content-type-builder": "3.1.4",
-    "strapi-plugin-email": "3.1.4",
-    "strapi-plugin-upload": "3.1.4",
-    "strapi-plugin-users-permissions": "3.1.4",
-    "strapi-utils": "3.1.4"
+    "strapi": "3.3.2",
+    "strapi-admin": "3.3.2",
+    "strapi-utils": "3.3.2",
+    "strapi-plugin-content-type-builder": "3.3.2",
+    "strapi-plugin-content-manager": "3.3.2",
+    "strapi-plugin-users-permissions": "3.3.2",
+    "strapi-plugin-email": "3.3.2",
+    "strapi-plugin-upload": "3.3.2",
+    "strapi-connector-mongoose": "3.3.2"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "a4be552b-c626-433d-b0c7-e5f52712dd1f"
+    "uuid": "dfafd57d-4063-4c9d-9704-278503a6531b"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
