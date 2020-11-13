@@ -11,7 +11,7 @@ const database = process.env.DB_INITDB || 'admin';
 
   module.exports = function init_connection(callback) {
     mongoose.set('useCreateIndex', true)
-    mongoose.connect(`mongodb://${server}/${database}`, { useNewUrlParser: true, dbName: "mbsr"});
+    mongoose.connect(`mongodb://${server}/${database}`, { useNewUrlParser: true, useUnifiedTopology: true, dbName: "mbsr"});
     var db = mongoose.connection;
     db.on('error', function (err) {
       console.error('MongoDB connection failed.');
