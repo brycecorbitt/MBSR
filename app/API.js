@@ -31,17 +31,24 @@ class API {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(params),
-    }).catch(err => {
+      }).catch(err => {
       return {error: err};
     });
-    if (!call.ok) {
-      let json_response = '';
-      if ('json' in call)
-        json_response = await call.json();
-        if ('error' in json_response);
-        return json_response;
-      return {error: call.statusText || call.status}
-    }
+      if (!call.ok) {
+        let json_response = '';
+        if ('json' in call) {
+          json_response = await call.json();
+          if ('error' in json_response)
+            return json_response;
+        return {error: call.statusText || call.status}
+        }
+        if('error' in call && call.error.message === 'Network request failed'){
+          if(call.error.message === 'Network request failed'){
+            return {error: 'Unable to connect to MBSR server.\nPlease contact Bryce: bscorbitt@wpi.edu'}
+          }
+        return {error: call.error}
+        }
+      }
 
     if (!call.json) return call;
 
@@ -61,11 +68,18 @@ class API {
     });
     if (!call.ok) {
       let json_response = '';
-      if ('json' in call)
+      if ('json' in call){
         json_response = await call.json();
-        if ('error' in json_response);
-        return json_response;
-      return {error: call.statusText || call.status}
+        if ('error' in json_response)
+          return json_response;
+        return {error: call.statusText || call.status}
+      }
+      if('error' in call && call.error.message === 'Network request failed'){
+          if(call.error.message === 'Network request failed'){
+            return {error: 'Unable to connect to MBSR server.\nPlease contact Bryce: bscorbitt@wpi.edu'}
+          }
+        return {error: call.error}
+      }
     }
 
     if (!('json' in call)) return call;

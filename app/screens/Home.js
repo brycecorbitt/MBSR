@@ -4,6 +4,7 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
 import API from '../API';
 import Base from '../components/Base';
+import DropDownHolder from '../DropDownHolder';
 import LogEvents from '../event'
 // import Button from '../components/Button'
 const on_press = function(evt, id=null){
@@ -59,6 +60,12 @@ class Home extends React.Component {
     user_call = await API.check_session();
     if(user_call.data)
       this.setState({user: user_call.data});
+    console.log(JSON.stringify(user_call))
+    if ('error' in user_call){
+      console.log(user_call)
+      DropDownHolder.throwError(user_call.error)
+      return
+    }
     const { navigation } = this.props;
 
     this.focusListener = navigation.addListener('didFocus', () => {
