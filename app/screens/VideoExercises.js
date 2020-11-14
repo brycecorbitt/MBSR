@@ -40,8 +40,8 @@ class VideoExercises extends React.Component {
           }}
           marginHorizontal="10%">
           <Icon
-          type="material-community"
-          name="library-video"
+          type="material"
+          name="video-library"
           size={60}
           color="#2e466c"
           style={{flex: 1.5}}

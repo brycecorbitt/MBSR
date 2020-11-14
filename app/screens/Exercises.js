@@ -57,7 +57,7 @@ class Exercises extends React.Component {
           <View style={{marginVertical: 20}}></View>
           <Button
             title="Video Exercises"
-            icon={{ name: "library-video", size: 50 }}
+            icon={{ name: "video-library", type: 'material', size: 50 }}
             onPress={() => this.props.navigation.navigate("VideoExercises")}
           />
           

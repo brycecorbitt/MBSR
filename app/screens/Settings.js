@@ -22,7 +22,7 @@ class Settings extends React.Component {
           marginHorizontal="10%"
         >
           <Icon
-            type="material-community"
+            type="material"
             name="settings"
             size={60}
             color="#2e466c"

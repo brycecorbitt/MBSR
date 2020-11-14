@@ -60,6 +60,7 @@ class Home extends React.Component {
     if(user_call.data)
       this.setState({user: user_call.data});
     const { navigation } = this.props;
+
     this.focusListener = navigation.addListener('didFocus', () => {
       this.setState({user: API.get_user()});
     });
@@ -104,7 +105,7 @@ class Home extends React.Component {
               this.props.navigation.navigate('Settings');
             }}>
             <Icon
-              type="material-community"
+              type="material"
               name="settings"
               size={28}
               color="#2e466c"

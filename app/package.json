@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/toolbar-android": "react-native-community/toolbar-android",
     "@react-navigation/native": "^5.7.5",
     "@react-navigation/stack": "^5.9.2",
     "moment": "^2.24.0",

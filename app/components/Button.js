@@ -15,7 +15,7 @@ class Button extends React.Component {
     return (
       <View style={style}>
         <Icon
-          type="material-community"
+          type={icon.type || "material-community"}
           name={icon.name}
           style={[style, centered]}
           size={icon.size || 40}
