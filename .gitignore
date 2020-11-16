@@ -1,3 +1,5 @@
 .vscode/
 /db/
 .DS_Store
+
+cms/.strapi-updater.json
