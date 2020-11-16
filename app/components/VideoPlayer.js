@@ -1,5 +1,5 @@
 import React from "react";
-import {StyleSheet, Dimensions, Modal} from "react-native"
+import {StyleSheet, Dimensions, Modal, StatusBar} from "react-native"
 import VP from 'react-native-video-controls'
 import Orientation from 'react-native-orientation-locker'
 
@@ -99,6 +99,7 @@ class VideoPlayer extends React.Component {
             this.onMinimize()
           }}
           >
+          <StatusBar hidden={true}/>
           {player}
         </Modal>
     return player
