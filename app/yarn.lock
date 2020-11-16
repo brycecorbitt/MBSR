@@ -1011,11 +1011,6 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.10.tgz#5dda643e19e587793bc2034dd9bf7398ad43d401"
   integrity sha512-rk4sWFsmtOw8oyx8SD3KSvawwaK7gRBSEIy2TAwURyGt+3TizssXP1r8nx3zY+R7v2vYYHXZ+k2/GULAT/bcaQ==
 
-"@react-native-community/toolbar-android@^0.1.0-rc.1":
-  version "0.1.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@react-native-community/toolbar-android/-/toolbar-android-0.1.0-rc.2.tgz#86cae655836afacc52d4063062cc59837d1a8640"
-  integrity sha512-UCblqsitOcoYxVc6QzcaqCKogeRnePPMw7cbGvW5GI/GXIwQel8Kge9d910W3MUPUzw3pFzhIZVug6U3W067Pg==
-
 "@react-native-community/toolbar-android@react-native-community/toolbar-android":
   version "0.1.0-rc.2"
   resolved "https://codeload.github.com/react-native-community/toolbar-android/tar.gz/39413caee727d8180d20b9f6cb9cd85a85566193"
@@ -5443,7 +5438,7 @@ react-native-vector-icons@^6.6.0:
 
 "react-native-video-controls@https://github.com/brycecorbitt/mbsr-react-native-video-controls":
   version "2.7.1"
-  resolved "https://github.com/brycecorbitt/mbsr-react-native-video-controls#3040098af4d4e09d845487ca330910d3ddbbfe5d"
+  resolved "https://github.com/brycecorbitt/mbsr-react-native-video-controls#0ed7f2f49b0127bf43240cc4cd9cb49e8c0f6472"
   dependencies:
     lodash "^4.16.4"
 
