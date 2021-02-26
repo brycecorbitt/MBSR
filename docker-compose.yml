@@ -12,7 +12,7 @@ services:
       - ./db:/data/db
 
   strapi:
-    image: strapi/strapi:3.3.2
+    image: strapi/strapi:3.5.1
     network_mode: "host"
     environment:
       - APP_NAME=cms
