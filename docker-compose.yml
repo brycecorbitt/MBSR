@@ -46,7 +46,7 @@ services:
     environment:
       - SERVER_PORT=34543
       - CMS_HOST=${CMS_HOST}
-      - CMS_USERNAME=${CMS_ADMIN_USERNAME}
+      - CMS_EMAIL=${CMS_ADMIN_EMAIL}
       - CMS_PASSWORD=${CMS_ADMIN_PASSWORD}
       - CMS_PORT=${CMS_PORT}
       - DB_HOST=${DB_HOST}

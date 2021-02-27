@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const USER = process.env.CMS_ADMIN_USERNAME || "mbsrcms";
-const PASS = process.env.CMS_ADMIN_PASSWORD || "mbsrMQP2021";
+const EMAIL = process.env.CMS_EMAIL;
+const PASS = process.env.CMS_PASSWORD;
 const HOST = process.env.CMS_HOST || "localhost";
 const PORT = process.env.CMS_PORT || 1337;
 
@@ -13,7 +13,7 @@ strapi.init = function(callback) {
 	var error;
 	var connect = () => {
 		strapi
-			.post('/auth/local/', {identifier: USER, password: PASS})
+			.post('/auth/local/', {identifier: EMAIL, password: PASS})
 			.then((response) => {
 				if(error in response) {
 					console.log("Failed to authenticate with Strapi CMS." + String(response.data))
@@ -29,8 +29,8 @@ strapi.init = function(callback) {
 			.catch(err => {
 				current_attempt++;
 				if (current_attempt >= max_attempts) {
-					console.log(err);
 					console.log(`Failed to connect to Strapi CMS after ${max_attempts} attempts.`);
+					console.log(`${err.config}\n${JSON.stringify(err.data)}`);
 					process.exit(2);
 				}
         setTimeout(connect, connect_timeout);
