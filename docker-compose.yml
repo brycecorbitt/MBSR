@@ -3,25 +3,29 @@ version: "3.3"
 services:
   db:
     image: mongo
-    network_mode: "host"
+    networks:
+      default:
+        ipv4_address: 172.16.1.1
     environment:
       - MONGO_INITDB_DATABASE=admin
     ports:
-      - 27017:27017
+      - ${DB_PORT}:${DB_PORT}
     volumes:
       - ./db:/data/db
 
   strapi:
     image: strapi/strapi:3.5.1
-    network_mode: "host"
+    networks:
+      default:
+        ipv4_address: 172.16.1.2
     environment:
       - APP_NAME=cms
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=${DB_HOST}
       - DATABASE_NAME=${CMS_DB_NAME}
-      - DATABASE_PORT=27017
+      - DATABASE_PORT=${DB_PORT}
       - DATABASE_SSL=false
-      - HOST=localhost
+      - HOST=${CMS_HOST}
       - ADMIN_USERNAME=${CMS_ADMIN_USERNAME}
       - ADMIN_EMAIL=${CMS_ADMIN_EMAIL}
       - ADMIN_PASSWORD=${CMS_ADMIN_PASSWORD}
@@ -36,13 +40,17 @@ services:
 
   server:
     build: ./server
-    network_mode: "host"
+    networks:
+      default:
+        ipv4_address: 172.16.1.3
     environment:
       - SERVER_PORT=34543
       - CMS_HOST=${CMS_HOST}
       - CMS_USERNAME=${CMS_ADMIN_USERNAME}
       - CMS_PASSWORD=${CMS_ADMIN_PASSWORD}
-      - CMS_PORT=1337
+      - CMS_PORT=${CMS_PORT}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
     restart: on-failure
     volumes:
       - ./config.json:/home/node/config.json
@@ -50,4 +58,14 @@ services:
       - db
       - strapi
     ports:
-      - 34543:34543
+      - ${SERVER_PORT}:${SERVER_PORT}
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.0.0/16
+          gateway: 172.16.0.1
+    driver_opts:
+      com.docker.network.bridge.name: "docker1"
