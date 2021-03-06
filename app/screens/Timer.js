@@ -116,11 +116,13 @@ class Timer extends React.Component {
                   onPress={() => {
                     let current_id = parseInt(this.state.timeid);
                     let new_id = String(current_id + 1);
+                    // Setting a new timer id will re-render countdown timer w/ updated time remaining
+                    // Update the timeid value in the callback to the updated state so that the new countdown
+                    // isn't created until after the new time has been stored.
                     this.setState({
-                      timeid: new_id,
                       endtime: this.state.current_time + 60,
                       current_time: this.state.current_time + 60,
-                    });
+                    }, () => {this.setState({timeid: new_id})});
                   }}
                 />
               </View>
@@ -132,10 +134,9 @@ class Timer extends React.Component {
                     let current_id = parseInt(this.state.timeid);
                     let new_id = String(current_id + 1);
                     this.setState({
-                      timeid: new_id,
                       endtime: this.state.current_time - 60,
                       current_time: this.state.current_time - 60,
-                    });
+                    }, () => {this.setState({timeid: new_id})});
                   }}
                 />
               </View>
