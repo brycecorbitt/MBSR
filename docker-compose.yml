@@ -31,7 +31,6 @@ services:
       - ADMIN_PASSWORD=${CMS_ADMIN_PASSWORD}
     ports:
       - 1337:1337
-      - 9229:9229 # This is the debug port
     volumes:
       - type: bind
         source: ./cms

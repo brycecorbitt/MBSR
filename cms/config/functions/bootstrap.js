@@ -11,12 +11,12 @@
  */
 
 module.exports = async () => {
-	// Bootstrap methods that need to be executed before account creation
-	await strapi.admin.services.permission.cleanPermissionInDatabase();
-  await strapi.admin.services.permission.ensureBoundPermissionsInDatabase();
-  await strapi.admin.services.user.migrateUsers();
-  await strapi.admin.services.role.createRolesIfNoneExist();
-  await strapi.admin.services.role.resetSuperAdminPermissions();
+		// Bootstrap methods that need to be executed before account creation
+		await strapi.admin.services.permission.cleanPermissionInDatabase();
+		await strapi.admin.services.permission.ensureBoundPermissionsInDatabase();
+		await strapi.admin.services.user.migrateUsers();
+		await strapi.admin.services.role.createRolesIfNoneExist();
+		await strapi.admin.services.role.resetSuperAdminPermissions();
 
 	// Load default account credentials (stored in .env)
 	let admin_creds = {
@@ -25,8 +25,10 @@ module.exports = async () => {
 		password: process.env.ADMIN_PASSWORD
 	};
 
-	// Get super admin role
+	// Get super admin role for admin panel
 	let super_admin_role = await strapi.admin.services.role.getSuperAdmin();
+	// Get "authenticated" role for user API access
+	let api_auth_role = await strapi.query('role', 'users-permissions').findOne({type: 'authenticated'});
 
 	// Check if admin account exists
 	const admin_exists = await strapi.admin.services.user.exists({email: admin_creds.email});
@@ -41,15 +43,22 @@ module.exports = async () => {
 			roles: [super_admin_role.id],
 			...admin_creds,
     	});
-		// Create admin user permission (needed for /auth/local authentication)
+		// Create API user permission (needed for /auth/local authentication)
 		let admin_perm = 	await strapi.plugins['users-permissions'].services.user.add({
-				confirmed: false,
+				confirmed: true,
 				blocked: false,
 				provider: 'local',
-				role: super_admin_role.id,
+				role: api_auth_role.id,
 				...admin_creds,
 			});
-		if(new_admin && admin_perm) {
+			// Update permissions for "authenticated" role to have full API access
+			const permissions = await strapi.query("permission", "users-permissions").find({ type: "application", role: api_auth_role.id });
+			await Promise.all(
+				permissions.map(p =>
+					strapi.query("permission", "users-permissions").update({ id: p.id }, { enabled: true })
+				)
+			);
+				if(new_admin && admin_perm) {
 			console.log(`Success! You can now log into the Strapi admin portal with the following credentials:\nEmail: ${admin_creds.email}\nPassword: ${admin_creds.password}\n`);
 		}
 	}
