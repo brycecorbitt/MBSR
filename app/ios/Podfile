@@ -40,9 +40,10 @@ target 'DoYouMindful' do
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
   pod 'react-native-video', :path => '../node_modules/react-native-video'
-  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
 
   pod 'react-native-orientation-locker', :path => '../node_modules/react-native-orientation-locker'
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
 
   target 'DoYouMindfulTests' do
     inherit! :search_paths
