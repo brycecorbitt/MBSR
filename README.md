@@ -12,7 +12,7 @@ A mobile platform to provide resources for Mindfulness Based Stress Reduction (M
 	{
 		"mbsr_connection": {
 			"protocol": "http",
-			"host": "172.16.1.3", // <-- change this to your local IP or Host/DNS name
+			"host": "172.16.1.3",
 			"port": 34543
 		},
 		"event_logging": {
@@ -87,11 +87,11 @@ The MBSR Server code is only updated after building a new image (in other words,
 	**NOTE:** If the back-end is running on localhost and app is unable to connect through the emulator, you may need to change the mbsr_connection in [config.json](https://github.com/brycecorbitt/MBSR/blob/master/config.json) to your computer's local ip address. This issue occurs when the emulator's network is behind a NAT and localhost for the emulator is different from localhost for the host machine. This is already mentioned above, but I put it here again because it's THAT important.
 
 ### Events System Logging
-The platform's in-house event system can be used to record in-app activities and is enabled by default. The following portion of the [config.json](/config.json) can be used to enable/disable event recording:
+The platform's in-house event system can be used to record in-app activities and is enabled by default. The following portion of the [config.json](/config.json) can be used to enable/disable event recording to the MBSR server and React Native log output, respectively:
 ``` json
 	"event_logging": {
-		"enabled": true, // <-- Events will be recorded to MBSR server
-		"console": true // <-- Events will be displayed in React Native log
+		"enabled": true,
+		"console": true
 	}
 ```
 ### Modifying the video player
