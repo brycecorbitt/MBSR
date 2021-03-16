@@ -1,11 +1,11 @@
 {
 	"mbsr_connection": {
 		"protocol": "http",
-		"host": "[MBSR_SERVER_DOMAIN_OR_IP]",
+		"host": "172.16.1.3",
 		"port": 34543
 	},
 	"event_logging": {
-		"enabled": false,
+		"enabled": true,
 		"console": true
 	},
 	"mailer": {
